@@ -1,0 +1,1 @@
+# communication-activity-core
