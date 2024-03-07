@@ -1,0 +1,16 @@
+:root {
+  --content-background: #dcdde4;
+
+  --button: #595684e6;
+  --button-hover: #454270e6;
+  --text-button: #fff;
+
+  --header: #595684;
+  --text: #000;
+  --text-hover: #656;
+
+  --transition: .4s;
+
+  --content-background-profile: #b197c6;
+  --button-profile: #8a78a7e6;
+}
