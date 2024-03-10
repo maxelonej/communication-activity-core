@@ -12,4 +12,9 @@ exitPopup.addEventListener('click', () => {
   bodyPopup.style.overflowY = 'scroll'
 })
 
-popup.addEventListener('click', (event) => event.target === popup ? popup.classList.remove('active') : null)
+popup.addEventListener('click', (event) => {
+  if(event.target === popup) {
+    bodyPopup.style.overflowY = 'scroll'
+    popup.classList.remove('active')
+  }
+})
