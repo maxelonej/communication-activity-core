@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-  <title>КДЯ</title>
+  <title>Коммуникационно–деятельностное ядро</title>
 </head>
 <body id="body">
   <header>
     <div class="header-wrapper">
       <div class="logo">
-        <a href="#main"><img src="./images/logo.png" alt="logo"></a>
+        <a href="#body"><img src="./images/logo.png" alt="logo"></a>
       </div>
       <nav>
         <ul class="nav-link">
@@ -45,8 +45,7 @@
           <a href="#"><img class="icon" src="./images/profile.png" alt="profile"></a>
         </div>
         <div class="burger-close">
-          <span class="close-line"></span>
-          <span class="close-line"></span>
+          <img src="images/cross.svg" alt="cross">
         </div>
       </nav>
     </div>
@@ -58,7 +57,7 @@
     </div>
 
     <div class="big-description">
-      <p>Коммуникативно – деятельностный подход к обучению основан на образовательном сотрудничестве, в котором заинтересованы, инициативны как обучающие, так и учащиеся. Коллективная образовательная, преимущественно проектная деятельность способствуют формированию общих и профессиональных компетенций.</p>
+      <p>Коммуникативно–деятельностный подход к обучению основан на образовательном сотрудничестве, в котором заинтересованы, инициативны как обучающие, так и учащиеся. Коллективная образовательная, преимущественно проектная деятельность способствуют формированию общих и профессиональных компетенций.</p>
     </div>
 
     <div class="projects">
@@ -93,9 +92,30 @@
         <a href="internships.html" class="btn">Подробнее</a>
       </div>
     </div>
-    <a href="#" class="btn feedback">Обратная связь</a>
-  </main>  
+  </main>
+  
+  <footer>
+    <button class="feedback">Обратная связь</button>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <div class="popup-top">
+          <h2 class="title">Обратная связь</h2>
+          <div class="popup-close">
+            <img src="images/cross.svg" alt="cross">
+          </div>
+        </div>
+        <span class="line"></span>
+        <form action="" method="post" class="feedback-form">
+          <input type="text" name="name" id="name" placeholder="* Укажите ваше имя" required>
+          <input type="email" name="email" id="email" placeholder="* Укажите ваш E-mail" required>
+          <textarea name="msg" id="msg" cols="30" rows="10" placeholder="* Введите ваше сообщение" required></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </footer>
 
   <script src="./js/burger.js"></script>
+  <script src="./js/popup.js"></script>
 </body>
 </html>

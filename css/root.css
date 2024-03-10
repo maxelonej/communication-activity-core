@@ -1,16 +1,42 @@
 :root {
-  --content-background: #dcdde4;
-
+  /* Шапка */
+  --header-bg: #dcdde4;
+ 
+  /* Блок */
+  --content-bg: #dcdde480;
+  --content-dark-bg: rgba(0, 0, 0, .3);
+  
+  /* Кнопка */
   --button: #595684e6;
   --button-hover: #454270e6;
   --text-button: #fff;
-
-  --header: #595684;
+  
+  /* Текст */
   --text: #000;
   --text-hover: #656;
-
+  
+  /* Заголовок */
+  --heading: #595684;
+  
+  
+  /* Форма */
+  --input: #a7a7a7;
+  --input-hover: #5d5b5b; 
+  --input-focus: #000;
+  
+  /* Плавность */
   --transition: .4s;
 
-  --content-background-profile: #b197c6;
+  /* Линия */
+  --line: #a7a7a7;
+
+  /* Крестик */
+  --cross-hover: #c7c3cf;
+
+  /* Всплывающее окно */
+  --popup-content-bg: #dcdde4;
+  
+  /* Личный кабинет */
+  --content-bg-profile: #b197c6;
   --button-profile: #8a78a7e6;
 }
