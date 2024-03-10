@@ -1,20 +1,21 @@
-const popup = document.getElementById('popup')
-const openPopup = document.querySelector('.feedback')
-const exitPopup = document.querySelector('.popup-close')
 const bodyPopup = document.getElementById('body')
 
-openPopup.addEventListener('click', () => {
+const openPopup = (popupClass) => {
+  const popup = document.querySelector(`.${popupClass}`)
   popup.classList.add('active')
   bodyPopup.style.overflowY = 'hidden'
-})
-exitPopup.addEventListener('click', () => {
+}
+
+const exitPopup = (popupClass) => {
+  const popup = document.querySelector(`.${popupClass}`)
   popup.classList.remove('active')
   bodyPopup.style.overflowY = 'scroll'
-})
+}
 
-popup.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
+  const popup = document.querySelector(`.${event.target.closest('.popup') ? 'active' : ''}`)
   if(event.target === popup) {
-    bodyPopup.style.overflowY = 'scroll'
     popup.classList.remove('active')
+    bodyPopup.style.overflowY = 'scroll'
   }
 })
