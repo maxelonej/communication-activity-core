@@ -93,12 +93,10 @@ footer {
   z-index: 11;
   top: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 60px;
 }
 .burger-close img {
-  width: 40px;
-  height: 40px;
+  width: 65px;
 }
 
 .close-line {
