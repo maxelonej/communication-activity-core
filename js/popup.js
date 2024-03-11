@@ -1,21 +1,44 @@
-const bodyPopup = document.getElementById('body')
-
+// Открывает попап
 const openPopup = (popupClass) => {
   const popup = document.querySelector(`.${popupClass}`)
   popup.classList.add('active')
-  bodyPopup.style.overflowY = 'hidden'
+  if (window.matchMedia("(max-width: 935px)").matches) {
+    document.body.style.overflowY = "hidden";
+  }
 }
 
-const exitPopup = (popupClass) => {
+// Закрывает активный попап
+const exitPopupByElement = (popup) => {
+  const popupClass = popup.classList[0]
+  const popupElement = document.querySelector(`.${popupClass}`)
+  popupElement.classList.remove('active')
+  if (window.matchMedia("(max-width: 935px)").matches) {
+    document.body.style.overflowY = "scroll";
+  }
+}
+
+// Закрывает конкретный попап
+const exitPopupByClass = (popupClass) => {
   const popup = document.querySelector(`.${popupClass}`)
   popup.classList.remove('active')
-  bodyPopup.style.overflowY = 'scroll'
+  if (window.matchMedia("(max-width: 935px)").matches) {
+    document.body.style.overflowY = "hidden";
+  }
 }
 
+loadComponent('../components/popups/feedback.html', 'popup-feedback', () => {
+  const closePopup = document.querySelector('.popup-close')
+  closePopup.addEventListener('click', () => {
+    exitPopupByClass('feedback-popup')
+  })
+})
+
 document.addEventListener('click', (event) => {
-  const popup = document.querySelector(`.${event.target.closest('.popup') ? 'active' : ''}`)
+  const popup = event.target.closest('.popup')
   if(event.target === popup) {
-    popup.classList.remove('active')
-    bodyPopup.style.overflowY = 'scroll'
+    exitPopupByElement(popup)
+  }
+  if (window.matchMedia("(max-width: 935px)").matches) {
+    document.body.style.overflowY = document.body.style.overflowY === "scroll";
   }
 })
