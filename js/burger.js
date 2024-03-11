@@ -1,14 +1,15 @@
-const burger = document.querySelector('.burger')
-const openBurger = document.querySelector('.burger-open') 
-const closeBurger = document.querySelector('.burger-close')
-const bodyBurger = document.getElementById('body')
+loadComponent('../components/header.html', 'header', () => {
+  const burger = document.querySelector('.burger')
+  const openBurger = document.querySelector('.burger-open')
+  const closeBurger = document.querySelector('.burger-close')
 
-burger.addEventListener('click', () => {
-  openBurger.classList.add('active')
-  bodyBurger.style.overflowY = 'hidden'
-})
+  burger.addEventListener('click', () => {
+    openBurger.classList.add('active')
+    document.body.style.overflowY = 'hidden'
+  })
 
-closeBurger.addEventListener('click', () => {
-  openBurger.classList.remove('active')
-  bodyBurger.style.overflowY = 'scroll'
+  closeBurger.addEventListener('click', () => {
+    openBurger.classList.remove('active')
+    document.body.style.overflowY = 'scroll'
+  })
 })
