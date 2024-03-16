@@ -8,24 +8,39 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-}
-
-/* body right-bg */
-.r-bg {
-  background: url('../images/background-2.png');
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
   scroll-behavior: smooth;
 }
 
-/* body left-bg */
-.l-bg {
-  background: url('../images/background-1.png');
-  background-repeat: no-repeat;
+main {
+  background: url('../images/Фон\ страницы\ 1440.png');
   background-position: right;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  main {
+    background: url('../images/Фон\ страницы\ 768.png');
+    background-position: right;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media (max-width: 425px) {
+  main {
+    background: url('../images/Фон\ страницы\ 425.png');
+    background-position: right;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 /* Шапка */
@@ -74,8 +89,11 @@ footer {
 .burger {
   display: none;
   position: relative;
-  width: 40px;
-  height: 28px;
+  width: 60px;
+  height: 60px;
+}
+.burger img {
+  width: 100%;
 }
 
 .burger__line {
@@ -100,7 +118,7 @@ footer {
 
 .burger-close {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   width: 60px;
 }
@@ -246,7 +264,7 @@ button:hover, .btn:hover {
   margin-inline: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .big-title {
     font-size: .8em;
   }
