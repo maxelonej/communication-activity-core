@@ -12,7 +12,7 @@
 }
 
 main {
-  background: url('../images/Фон\ страницы\ 1440.png');
+  background: url('../img/Фон\ страницы\ 1440.png');
   background-position: right;
   background-position: center center;
   -webkit-background-size: cover;
@@ -22,7 +22,7 @@ main {
 }
 @media (max-width: 768px) {
   main {
-    background: url('../images/Фон\ страницы\ 768.png');
+    background: url('../img/Фон\ страницы\ 768.png');
     background-position: right;
     background-position: center center;
     -webkit-background-size: cover;
@@ -33,7 +33,7 @@ main {
 }
 @media (max-width: 425px) {
   main {
-    background: url('../images/Фон\ страницы\ 425.png');
+    background: url('../img/Фон\ страницы\ 425.png');
     background-position: right;
     background-position: center center;
     -webkit-background-size: cover;
