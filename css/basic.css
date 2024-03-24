@@ -20,6 +20,7 @@ main {
   -o-background-size: cover;
   background-size: cover;
 }
+
 @media (max-width: 768px) {
   main {
     background: url('../img/Фон\ страницы\ 768.png');
@@ -31,6 +32,7 @@ main {
     background-size: cover;
   }
 }
+
 @media (max-width: 425px) {
   main {
     background: url('../img/Фон\ страницы\ 425.png');
@@ -92,6 +94,7 @@ footer {
   width: 60px;
   height: 60px;
 }
+
 .burger img {
   width: 100%;
 }
@@ -108,10 +111,12 @@ footer {
 .burger__line:nth-child(1) {
   top: 0;
 }
+
 .burger__line:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .burger__line:nth-child(3) {
   bottom: 0;
 }
@@ -122,6 +127,7 @@ footer {
   right: 20px;
   width: 60px;
 }
+
 .burger-close img {
   width: 65px;
 }
@@ -135,15 +141,19 @@ footer {
   background: var(--text);
   transition: background-color var(--transition);
 }
+
 .close-line:nth-child(1) {
   transform: translateY(-50%, -50%) rotate(45deg);
 }
+
 .close-line:nth-child(2) {
   transform: translateY(-50%, -50%) rotate(-45deg);
 }
 
 @media (max-width: 935px) {
-  .header-wrapper .nav-link, .header-wrapper .img-links {
+
+  .header-wrapper .nav-link,
+  .header-wrapper .img-links {
     display: none;
   }
 
@@ -162,9 +172,11 @@ footer {
     background: var(--header-bg);
     transition: var(--transition);
   }
+
   .burger-open.active {
     transform: translateX(0);
   }
+
   nav ul {
     font-size: 1.2em;
     line-height: 1.2em;
@@ -201,12 +213,14 @@ a {
   text-decoration: none;
   transition: .4s;
 }
+
 a:hover {
   color: #656;
 }
 
 /* Кнопка */
-button, .btn {
+button,
+.btn {
   padding: 10px 15px;
   border-radius: 4px;
   border: none;
@@ -217,7 +231,9 @@ button, .btn {
   cursor: pointer;
   transition: var(--transition);
 }
-button:hover, .btn:hover {
+
+button:hover,
+.btn:hover {
   color: var(--text-button);
   background: var(--button-hover);
 }
@@ -242,7 +258,7 @@ button:hover, .btn:hover {
 
 /* Заголовок */
 .big-title {
-  padding: 2em .5em; 
+  padding: 2em .5em;
   margin-top: 66px;
   text-align: center;
   font-size: 1.1em;
@@ -259,8 +275,9 @@ button:hover, .btn:hover {
   text-align: center;
   background: var(--content-bg);
 }
+
 .big-description p {
-  max-width: 1200px; 
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -268,6 +285,7 @@ button:hover, .btn:hover {
   .big-title {
     font-size: .8em;
   }
+
   .big-description {
     font-size: 1em;
   }
@@ -287,10 +305,10 @@ button:hover, .btn:hover {
   visibility: hidden;
   transition: var(--transition);
 }
+
 .popup.active {
   visibility: visible;
   opacity: 1;
-  transition: var(--transition);
 }
 
 .popup-content {
@@ -298,8 +316,11 @@ button:hover, .btn:hover {
   flex-flow: column wrap;
   align-items: center;
   margin-inline: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1), 0 16px 32px 0 rgba(0, 0, 0, .1);
+  filter: drop-shadow(0 1px 3px rgba(110, 110, 110, .5));
   background: var(--popup-content-bg);
 }
+
 
 .popup-top {
   position: relative;
@@ -307,9 +328,11 @@ button:hover, .btn:hover {
   width: 100%;
   justify-content: space-between;
 }
+
 .popup-content .title {
   padding: 20px;
 }
+
 .popup-close {
   position: absolute;
   top: 5px;
@@ -320,17 +343,21 @@ button:hover, .btn:hover {
   cursor: pointer;
   transition: background var(--transition);
 }
+
 .popup-close img {
   width: 32px;
   height: 32px;
 }
+
 .popup-close:hover {
   background: var(--cross-hover);
 }
+
 @media (max-width: 935px) {
   .popup-close {
     display: none;
   }
+
   .popup-top {
     position: relative;
     display: flex;
@@ -345,18 +372,24 @@ button:hover, .btn:hover {
   gap: 10px;
 }
 
-input, .feedback-form textarea {
+input,
+.feedback-form textarea {
   padding: 10px;
   border: 1px solid var(--input);
   transition: border-color var(--transition);
   outline: none;
 }
-input:hover, .feedback-form textarea:hover {
+
+input:hover,
+.feedback-form textarea:hover {
   border-color: var(--input-hover);
 }
-input:focus, textarea:focus {
+
+input:focus,
+textarea:focus {
   border-color: var(--input-focus);
 }
+
 textarea {
   min-height: 100px;
   height: 100px;
