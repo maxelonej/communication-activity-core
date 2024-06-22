@@ -43,4 +43,29 @@ class Header extends HTMLElement {
   }
 }
 
+class Feedback extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="popup feedback-popup">
+        <div class="popup-content">
+          <div class="popup-top">
+            <h2 class="title">Обратная связь</h2>
+            <div class="popup-close">
+              <img src="img/cross.svg" alt="cross">
+            </div>
+          </div>
+          <span class="line"></span>
+          <form class="feedback-form">
+            <input type="text" name="name" id="name" placeholder="* Укажите ваше имя" required>
+            <input type="email" name="email" id="email" placeholder="* Укажите ваш E-mail" required>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="* Введите ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    `
+  }
+}
+
 customElements.define('app-header', Header);
+customElements.define('app-feedback', Feedback)
