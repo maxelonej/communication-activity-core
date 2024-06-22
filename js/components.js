@@ -1,13 +1,46 @@
-const loadComponent = (file, elementId, callback) => {
-  fetch(file)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById(elementId).innerHTML = data;
-      if (callback) {
-        callback();
-      }
-    })
+class Header extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <nav>
+          <ul class="nav-link">
+            <li><a href="pas.html">ПАС</a></li>
+            <li><a href="project-exchange.html">Биржа проектов</a></li>
+            <li><a href="competition.html">Конкурсы</a></li>
+            <li><a href="taomskills.html">TaomSkills</a></li>
+            <li><a href="internships.html">Практики и стажировки</a></li>
+          </ul>
+        </nav>
+        <div class="img-links">
+          <a href="profile.html"><img class="icon" src="img/profile.png" alt="profile"></a>
+        </div>
+        <div class="burger">
+          <img src="../img/burger-menu.svg" alt="burger menu">
+        </div>
+      </div>
+
+      <div class="burger-open">
+        <nav>
+          <ul class="nav-link">
+            <li><a href="pas.html">ПАС</a></li>
+            <li><a href="project-exchange.html">Биржа проектов</a></li>
+            <li><a href="competition.html">Конкурсы</a></li>
+            <li><a href="taomskills.html">TaomSkills</a></li>
+            <li><a href="internships.html">Практики и стажировки</a></li>
+          </ul>
+          <div class="img-links">
+            <a href="profile.html"><img class="icon" src="img/profile.png" alt="profile"></a>
+          </div>
+          <div class="burger-close">
+            <img src="img/cross.svg" alt="cross">
+          </div>
+        </nav>
+      </div>
+      `
+  }
 }
 
-loadComponent('../components/header.html', 'header')
-loadComponent('../components/popups/feedback.html', 'popup-feedback')
+customElements.define('app-header', Header);
