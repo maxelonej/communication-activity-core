@@ -1,5 +1,50 @@
-/* Переменные */
-@import url(root.css);
+:root {
+  /* Шапка */
+  --header-bg: #dcdde4;
+
+  /* Блок */
+  --content-bg: #dcdde480;
+  --content-dark-bg: rgba(0, 0, 0, .3);
+
+  /* Кнопка */
+  --button: #595684e6;
+  --button-hover: #454270e6;
+  --text-button: #fff;
+
+  /* Текст */
+  --text: #000;
+  --text-hover: #656;
+
+  /* Заголовок */
+  --heading: #595684;
+
+  /* Ссылка */
+  --link: #10269A;
+  --link-hover: #475dce;
+
+  /* Форма */
+  --input: #a7a7a7;
+  --input-hover: #5d5b5b;
+  --input-focus: #000;
+
+  /* Плавность */
+  --transition: .4s;
+
+  /* Линия */
+  --line: #a7a7a7;
+  --pas-line: #59568460;
+
+  /* Крестик */
+  --cross-hover: #c7c3cf;
+
+  /* Всплывающее окно */
+  --popup-content-bg: #dcdde4;
+
+  /* Личный кабинет */
+  --content-bg-profile: #b197c6;
+  --button-profile: #8a78a7e6;
+}
+
 /* Шрифт */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
@@ -11,47 +56,13 @@
   scroll-behavior: smooth;
 }
 
-main {
-  background: url('../img/Фон\ страницы\ 1440.png');
-  background-position: right;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-@media (max-width: 768px) {
-  main {
-    background: url('../img/Фон\ страницы\ 768.png');
-    background-position: right;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 425px) {
-  main {
-    background: url('../img/Фон\ страницы\ 425.png');
-    background-position: right;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
 /* Шапка */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--header-bg);
+  background: red;
 }
 
 nav ul {
