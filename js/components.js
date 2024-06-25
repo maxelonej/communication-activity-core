@@ -3,7 +3,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <div class="header-wrapper">
         <div class="logo">
-          <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+          <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
         </div>
         <nav>
           <ul class="nav-link">
@@ -39,7 +39,7 @@ class Header extends HTMLElement {
           </div>
         </nav>
       </div>
-      `
+      `;
   }
 }
 
@@ -63,9 +63,9 @@ class Feedback extends HTMLElement {
           </form>
         </div>
       </div>
-    `
+    `;
   }
 }
 
-customElements.define('app-header', Header);
-customElements.define('app-feedback', Feedback)
+customElements.define("cac-header", Header);
+customElements.define("cac-feedback", Feedback);
