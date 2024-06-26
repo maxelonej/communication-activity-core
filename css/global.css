@@ -1,55 +1,121 @@
-:root {
-  /* Шапка */
-  --header-bg: #dcdde4;
-
-  /* Блок */
-  --content-bg: #dcdde480;
-  --content-dark-bg: rgba(0, 0, 0, .3);
-
-  /* Кнопка */
-  --button: #595684e6;
-  --button-hover: #454270e6;
-  --text-button: #fff;
-
-  /* Текст */
-  --text: #000;
-  --text-hover: #656;
-
-  /* Заголовок */
-  --heading: #595684;
-
-  /* Ссылка */
-  --link: #10269A;
-  --link-hover: #475dce;
-
-  /* Форма */
-  --input: #a7a7a7;
-  --input-hover: #5d5b5b;
-  --input-focus: #000;
-
-  /* Плавность */
-  --transition: .4s;
-
-  /* Линия */
-  --line: #a7a7a7;
-  --pas-line: #59568460;
-
-  /* Крестик */
-  --cross-hover: #c7c3cf;
-
-  /* Всплывающее окно */
-  --popup-content-bg: #dcdde4;
-
-  /* Личный кабинет */
-  --content-bg-profile: #b197c6;
-  --button-profile: #8a78a7e6;
+@font-face {
+  font-family: 'Inter Regular';
+  src: url('../font/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
 }
 
-/* TODO: font Inter500 600 700 etc */
+@font-face {
+  font-family: 'Inter Medium';
+  src: url('../font/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter SemiBold';
+  src: url('../font/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Inter Bold';
+  src: url('../font/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+:root {
+  --purple-500: #595684;
+  --purple-700: #3f3d5b;
+  --gray-100: #f2f2f3;
+  --gray-200: #cacaca;
+  --gray-500: #808080;
+  --white: #fff;
+  --black: #000;
+  --blue: #3042dc;
+  --transition: .4s;
+  --regular: 'Inter Regular';
+  --medium: 'Inter Medium';
+  --semibold: 'Inter SemiBold';
+  --bold: 'Inter Bold';
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  background: var(--gray-100);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: var(--purple-500);
+  height: 56px;
+}
+
+/* Header wrapper */
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* 1. Header Logo */
+.header__logo-link {
+  padding-top: 0.3rem;
+  padding-inline: 0.625rem;
+  /* todo add pl.625r when device 1200px */
+  padding-left: 0;
+}
+
+/* 2. Header Navigation */
+.header__nav-list {
+  display: flex;
+  gap: 0.45625rem;
+  list-style-type: none;
+}
+
+.header__nav-link {
+  padding: 0.9375rem 0.45625rem;
+  text-decoration: none;
+  color: var(--gray-200);
+  font-family: var(--medium);
+  font-size: 0.9375rem;
+  transition: var(--transition);
+}
+
+.header__nav-link:hover {
+  color: var(--white);
+}
+
+/* 3. Header Links */
+.header__links {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.header__links-link {
+  padding: 0.625rem;
+  padding-bottom: 0.25rem;
+}
+
+.header__links-link:last-child {
+  /* todo add pr.625r when device 1200px */
+  padding-right: 0;
+}
+
+/* Burger menu - mobile devices */
+.header__burger,
+.header__burger-open {
+  display: none;
 }
