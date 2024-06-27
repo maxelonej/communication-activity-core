@@ -1,3 +1,5 @@
+/* Fonts */
+
 @font-face {
   font-family: 'Inter Regular';
   src: url('../font/Inter-Regular.ttf') format('truetype');
@@ -22,6 +24,8 @@
   font-weight: 700;
 }
 
+/* Variables */
+
 :root {
   --purple-500: #595684;
   --purple-700: #3f3d5b;
@@ -32,16 +36,32 @@
   --black: #000;
   --blue: #3042dc;
   --transition: .4s;
-  --regular: 'Inter Regular';
-  --medium: 'Inter Medium';
-  --semibold: 'Inter SemiBold';
-  --bold: 'Inter Bold';
+  --ff-regular: 'Inter Regular';
+  --ff-medium: 'Inter Medium';
+  --ff-semibold: 'Inter SemiBold';
+  --ff-bold: 'Inter Bold';
+  --fs-600: clamp(2rem, 3vw, 2.4rem);
+  --fs-500: clamp(1.6rem, 2.5vw, 2.2rem);
+  --fs-550: clamp(1.4rem, 2vw, 1.85rem);
+  --fs-400: clamp(1.2rem, 1.5vw, 1.5rem);
+  --fs-300: clamp(1.1rem, 1.8vw, 1.4rem);
+}
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -54,8 +74,12 @@ main {
   margin: 0 auto;
 }
 
+/* Start of header */
+
 /* Header */
 .header {
+  position: fixed;
+  width: 100%;
   background: var(--purple-500);
   height: 56px;
 }
@@ -68,32 +92,34 @@ main {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+  height: 100%;
 }
 
 /* 1. Header Logo */
 .header__logo-link {
-  padding-top: 0.3rem;
-  padding-inline: 0.625rem;
-  /* todo add pl.625r when device 1200px */
+  padding-inline: 1rem;
   padding-left: 0;
 }
 
 /* 2. Header Navigation */
+/* ul */
 .header__nav-list {
   display: flex;
-  gap: 0.45625rem;
+  gap: .73rem;
   list-style-type: none;
 }
 
+/* li a */
 .header__nav-link {
-  padding: 0.9375rem 0.45625rem;
+  padding: 1.5rem .73rem;
   text-decoration: none;
   color: var(--gray-200);
-  font-family: var(--medium);
-  font-size: 0.9375rem;
+  font-family: var(--ff-medium);
+  font-size: var(--fs-300);
   transition: var(--transition);
 }
 
+/* li a:hover */
 .header__nav-link:hover {
   color: var(--white);
 }
@@ -101,21 +127,113 @@ main {
 /* 3. Header Links */
 .header__links {
   display: flex;
-  gap: 0.375rem;
+  gap: .6rem;
 }
 
 .header__links-link {
-  padding: 0.625rem;
-  padding-bottom: 0.25rem;
+  padding: .4rem 1rem;
 }
 
 .header__links-link:last-child {
-  /* todo add pr.625r when device 1200px */
   padding-right: 0;
 }
 
-/* Burger menu - mobile devices */
-.header__burger,
+@media screen and (max-width: 1200px) {
+  .header__logo-link {
+    padding-left: 1rem;
+  }
+
+  .header__links-link:last-child {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .header__nav-link {
+    font-size: 1.2rem;
+  }
+
+  .header__logo {
+    width: 42px;
+  }
+
+  .header__links-icon {
+    width: 32px;
+  }
+}
+
+/* Burger icon in header*/
 .header__burger-open {
   display: none;
+  /* display: block; ig */
+  filter: invert(100%);
+  cursor: pointer;
 }
+
+.header__burger-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Burger menu - mobile devices */
+/* burger content */
+.header__burger-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2.6rem;
+  max-width: calc(300px - (900px - 100vw) * (300 - 220) / (900 - 320));
+  width: 100%;
+  height: 100vh;
+  font-size: var(--fs-550);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+/* burger ul */
+.header__burger__nav-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.8rem;
+  gap: calc(.73rem * 3);
+  list-style-type: none;
+}
+
+/* burger ul li a */
+.header__burger__nav-link {
+  color: var(--black);
+  text-decoration: none;
+  padding: .73rem 0;
+  text-decoration: none;
+  font-family: var(--ff-medium);
+  transition: var(--transition);
+}
+
+.header__burger-content.active {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+@media screen and (max-width: 925px) {
+
+  /* Navigation links in header */
+  .header__nav {
+    display: none;
+  }
+
+  /* Burger icon in header */
+  .header__burger-open {
+    display: block;
+  }
+
+  .header__burger-close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+}
+
+/* End of header */
