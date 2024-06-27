@@ -43,7 +43,7 @@ export class Header extends HTMLElement {
             </a>
             <!-- burger menu -->
             <div id="burger" class="header__links-link header__burger-open">
-              <img class="header__links-icon header__burger-open-icon" src="../img/burger-open.svg" alt="Открыть меню">
+              <img class="header__links-icon header__burger-open-icon" src="./img/burger-open.svg" alt="Открыть меню">
             </div>
           </div>
         </div>
