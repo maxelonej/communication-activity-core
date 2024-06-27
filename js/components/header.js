@@ -51,7 +51,9 @@ export class Header extends HTMLElement {
         <!-- burger content -->
         <div class="header__burger-content">
           <nav class="header__burger__nav">
-            <img class="header__links-link header__burger-close-icon" src="img/burger-close.svg" alt="Закрыть меню">
+            <div class="header__burger-close">
+              <img class="header__burger-close-icon" src="img/burger-close.svg" alt="Закрыть меню">
+            </div>
             <ul class="header__burger__nav-list">
               <!-- burger menu -->
               <!-- сделать no motion querry -->
@@ -96,7 +98,7 @@ burger.addEventListener("click", () => {
 });
 
 document
-  .querySelector(".header__burger-close-icon")
+  .querySelector(".header__burger-close")
   .addEventListener("click", () => {
     burgerContent.classList.remove("active");
   });
