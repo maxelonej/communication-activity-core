@@ -1,8 +1,4 @@
-/* Основные стили */
+/* Global styles */
 @import url(global.css);
 
-/* Стили, относящиеся только к этой странице */
-.logo {
-  width: 45px;
-  height: 45px;
-}
+/* Styles only for index.html */
