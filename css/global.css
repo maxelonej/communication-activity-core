@@ -66,8 +66,7 @@ html {
 }
 
 body {
-  background: #000;
-  /* background: var(--gray-100); */
+  background: var(--gray-100);
 }
 
 main {
@@ -213,11 +212,13 @@ main {
   transition: var(--transition);
 }
 
-.header__nav-item, .header__burger__nav-item {
+.header__nav-item,
+.header__burger__nav-item {
   display: flex;
 }
 
-.header__nav-link, .header__burger__nav-link {
+.header__nav-link,
+.header__burger__nav-link {
   flex: 1;
 }
 
