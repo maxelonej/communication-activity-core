@@ -4,24 +4,28 @@
   font-family: 'Inter Regular';
   src: url('../font/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter Medium';
   src: url('../font/Inter-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter SemiBold';
   src: url('../font/Inter-SemiBold.ttf') format('truetype');
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter Bold';
   src: url('../font/Inter-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-display: swap;
 }
 
 /* Variables */
@@ -74,6 +78,12 @@ main {
   margin: 0 auto;
 }
 
+img {
+  width: 100%;
+  /* or max-width: 100%; */
+  height: auto;
+}
+
 /* Start of header */
 
 /* Header */
@@ -96,6 +106,11 @@ main {
 }
 
 /* 1. Header Logo */
+.header__logo {
+  width: 45px;
+  height: 45px;
+}
+
 .header__logo-link {
   padding-block: .5rem;
   padding-inline: 1rem;
@@ -135,10 +150,16 @@ main {
   padding: 1.2rem 1rem;
 }
 
+.header__links-icon {
+  width: 32px;
+  height: 32px;
+}
+
 .header__links-link:last-child {
   padding-right: 0;
 }
 
+/* add padding inline for header container */
 @media screen and (max-width: 1200px) {
   .header__logo-link {
     padding-left: 1rem;
@@ -149,29 +170,22 @@ main {
   }
 }
 
+/* decrease fs nav-links in header */
 @media screen and (max-width: 1040px) {
   .header__nav-link {
     font-size: 1.2rem;
-  }
-
-  .header__logo {
-    width: 42px;
-  }
-
-  .header__links-icon {
-    width: 32px;
   }
 }
 
 /* Burger icon in header*/
 .header__burger-open {
   display: none;
-  /* display: block; ig */
   filter: invert(100%);
   cursor: pointer;
 }
 
-.header__burger-icon {
+.header__burger-open-icon,
+.header__burger-close-icon {
   width: 32px;
   height: 32px;
 }
