@@ -31,13 +31,15 @@
 /* Variables */
 
 :root {
-  --purple-500: #595684;
-  --purple-700: #3f3d5b;
-  --gray-100: #f2f2f3;
-  --gray-200: #cacaca;
-  --gray-500: #808080;
-  --white: #fff;
-  --black: #000;
+  --primary: #55537e;
+  --secondary: #c7b8ea;
+  --accent: #444266;
+  --text-gray: #d4d4d4;
+  --text-white: #fff;
+  --text-black: #000;
+  --bg-white: #fff;
+  --bg-gray: #f2f2f3;
+  --line: #808080;
   --blue: #3042dc;
   --transition: .4s;
   --ff-regular: 'Inter Regular';
@@ -70,7 +72,7 @@ html {
 }
 
 body {
-  background: var(--gray-100);
+  background: var(--bg-gray);
 }
 
 main {
@@ -90,7 +92,7 @@ img {
 .header {
   position: fixed;
   width: 100%;
-  background: var(--purple-500);
+  background: var(--primary);
   height: 56px;
 }
 
@@ -121,23 +123,21 @@ img {
 /* ul */
 .header__nav-list {
   display: flex;
-  gap: .73rem;
   list-style-type: none;
 }
 
 /* ul li a */
 .header__nav-link {
-  padding: 2rem .73rem;
+  padding: 1.9rem 1.46rem;
   text-decoration: none;
-  color: var(--gray-200);
-  font-family: var(--ff-medium);
+  color: var(--text-white);
+  font-family: var(--ff-regular);
   font-size: var(--fs-300);
   transition: var(--transition);
 }
 
-/* li a:hover */
 .header__nav-link:hover {
-  color: var(--white);
+  background: var(--accent);
 }
 
 /* 3. Header Links */
@@ -173,6 +173,7 @@ img {
 /* decrease fs nav-links in header */
 @media screen and (max-width: 1040px) {
   .header__nav-link {
+    padding: 2rem 1.26rem;
     font-size: 1.2rem;
   }
 
@@ -186,6 +187,13 @@ img {
     height: 32px;
   }
 }
+
+@media screen and (max-width: 945px) {
+  .header__nav-link {
+    padding: 2rem 1rem;
+  }
+}
+
 
 /* Burger icon in header*/
 .header__burger-open {
@@ -214,7 +222,7 @@ img {
   transform: translateX(100%);
   visibility: hidden;
   transition: var(--transition);
-  background: var(--white);
+  background: var(--bg-white);
 }
 
 /* burger ul */
@@ -228,8 +236,7 @@ img {
 
 /* burger ul li a */
 .header__burger__nav-link {
-  color: var(--black);
-  text-decoration: none;
+  color: var(--text-black);
   padding-block: 1rem;
   text-decoration: none;
   font-family: var(--ff-medium);
@@ -267,6 +274,7 @@ img {
   .header__nav {
     display: none;
   }
+
 
   /* Burger icon in header */
   .header__burger-open {
