@@ -56,7 +56,6 @@ export class Header extends HTMLElement {
             </div>
             <ul class="header__burger__nav-list">
               <!-- burger menu -->
-              <!-- сделать no motion querry -->
               <li class="header__burger__nav-item">
                 <a class="header__burger__nav-link" href="pas.html">ПАС</a>
               </li>
