@@ -25,6 +25,8 @@ const popup = document.querySelector(".popup");
 const link = document.querySelector(".activate-popup");
 const popupWrapper = document.querySelector(".popup__wrapper");
 
+let originalOverflowY = document.body.style.overflowY;
+
 link.addEventListener("click", (e) => {
   e.stopPropagation();
   popup.classList.toggle("active");
@@ -36,7 +38,7 @@ document.addEventListener("click", (event) => {
     !popupWrapper.contains(event.target) &&
     popup.classList.contains("active")
   ) {
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflowY = originalOverflowY;
     popup.classList.remove("active");
   }
 });
