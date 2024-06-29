@@ -84,7 +84,7 @@
 }
 
 .project__link:hover .project__button {
-  background: var(--accent);
+  background: var(--primary-hover);
   scale: 1.05;
   rotate: -1deg;
 }
@@ -102,7 +102,7 @@
 }
 
 .project__button:hover {
-  background: var(--accent);
+  background: var(--primary-hover);
 }
 
 @media screen and (max-width: 1200px) {
