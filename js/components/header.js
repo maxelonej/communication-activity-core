@@ -17,7 +17,7 @@ headers.forEach((header) => {
             <a class="header__nav-link" href="project-exchange.html">Биржа проектов</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="competition.html">Конкурсы</a>
+            <a class="header__nav-link" href="competitions.html">Конкурсы</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="taomskills.html">TaomSkills</a>
