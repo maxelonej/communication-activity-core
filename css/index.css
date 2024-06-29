@@ -2,3 +2,130 @@
 @import url(global.css);
 
 /* Styles only for index.html */
+/* Start of intro  */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: calc(5.6rem + 2.6rem);
+  padding-block: 2.6rem;
+  border-radius: 1.6rem;
+  gap: 1.3rem;
+  background: var(--bg-white);
+}
+
+@media screen and (max-width: 1200px) {
+  .intro-container {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .intro-container {
+    padding-inline: .6rem;
+  }
+}
+
+.intro-container__title {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-600);
+}
+
+.intro-container__description {
+  text-align: center;
+  font-family: var(--ff-regular);
+  max-width: 72.8rem;
+  font-size: var(--fs-300);
+  line-height: 1.7rem;
+}
+
+/* End of intro  */
+
+/* Start of projects */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 2.6rem auto;
+  gap: 1.3rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  flex: 0 0 30%;
+  border-radius: 3.5rem;
+  gap: 1.3rem;
+  padding: 2.6rem;
+  background: var(--bg-white);
+  max-width: 390px;
+}
+
+.project__title {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-500);
+  /* margin-bottom: 13px; */
+}
+
+.project__description {
+  max-width: 325px;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-300);
+  /* margin-bottom: 1.8rem; */
+}
+
+.project__link {
+  padding: .8rem;
+  padding-bottom: 0;
+}
+
+.project__link:hover .project__button {
+  background: var(--accent);
+  scale: 1.05;
+  rotate: -1deg;
+}
+
+.project__button {
+  padding: 1rem 1.8rem;
+  border: 0;
+  border-radius: 8px;
+  color: var(--text-white);
+  background: var(--primary);
+  font-family: var(--ff-medium);
+  font-size: var(--fs-300);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.project__button:hover {
+  background: var(--accent);
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    flex: auto;
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+}
+
+@media screen and (max-width: 770px) {
+  .project {
+    margin-inline: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .project {
+    border-radius: 0;
+  }
+}
+
+/* End of projects */
