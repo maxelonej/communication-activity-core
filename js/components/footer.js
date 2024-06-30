@@ -3,11 +3,16 @@ const footers = document.querySelectorAll("footer.footer");
 footers.forEach((footer) => {
   footer.innerHTML = `
     <div class="footer__wrapper">
-      <a class="footer__link activate-popup">Обратная связь</a>
+      <a class="footer__link activate-popup" data-popup="popup-feedback">Обратная связь</a>
       <p class="footer__copyright footer__paragraph">© ${new Date().getFullYear()}, <a class="footer__link" href="#">КДЯ</a></p>
     </div>
+  `;
+});
 
-    <div class="popup">
+const feedbackPopups = document.querySelectorAll(".popup-feedback");
+
+feedbackPopups.forEach((feedbackPopup) => {
+  feedbackPopup.innerHTML = `
       <div class="popup__wrapper">
         <form action="/submit-form" method="post">
           <fieldset class="popup__fieldset">
@@ -17,28 +22,32 @@ footers.forEach((footer) => {
           </fieldset>
         </form>
       </div>
-    </div>
   `;
 });
 
-const popup = document.querySelector(".popup");
-const link = document.querySelector(".activate-popup");
-const popupWrapper = document.querySelector(".popup__wrapper");
+// Popups
+const popups = document.querySelectorAll(".popup");
+const links = document.querySelectorAll(".activate-popup");
 
-let originalOverflowY = document.body.style.overflowY;
-
-link.addEventListener("click", (e) => {
-  e.stopPropagation();
-  popup.classList.toggle("active");
-  document.body.style.overflowY = "hidden";
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const popupName = link.dataset.popup;
+    const popup = document.querySelector(`.popup.${popupName}`);
+    if (popup) {
+      popup.classList.toggle("active");
+    }
+  });
 });
 
 document.addEventListener("click", (event) => {
-  if (
-    !popupWrapper.contains(event.target) &&
-    popup.classList.contains("active")
-  ) {
-    document.body.style.overflowY = originalOverflowY;
-    popup.classList.remove("active");
-  }
+  popups.forEach((popup) => {
+    const popupWrapper = popup.querySelector(".popup__wrapper");
+    if (
+      !popupWrapper.contains(event.target) &&
+      popup.classList.contains("active")
+    ) {
+      popup.classList.remove("active");
+    }
+  });
 });
