@@ -2,7 +2,6 @@
 @import url(../global.css);
 
 /* Styles only for index.html */
-
 /* Start of projects */
 .projects {
   display: flex;
@@ -10,7 +9,6 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 2.6rem;
   gap: 2.6rem;
 }
 
