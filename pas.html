@@ -15,18 +15,34 @@
   <main>
     <div class="intro-container">
       <h1 class="intro-container__title">Проектно-аналитические сессии</h1>
-      <p class="intro-container__description">Проектно-аналитические сессии (ПАСы) - эффективная форма обучения, практикуемая в ТАУ. ПАСы следуют в определенной последовательности, в соответствии с тематикой в которой определяется задача каждой конкретной сессии. Тема цикла сессий ежегодно формируется организаторами сессий исходя из актуальной проблематики. Организаторы ПАСа также формулируют требования к содержанию, которое должно быть получено или проработано на каждой конкретной сессии</p>
+      <p class="intro-container__description">Проектно-аналитические сессии (ПАСы) - эффективная форма обучения,
+        практикуемая в ТАУ. ПАСы следуют в определенной последовательности, в соответствии с тематикой в которой
+        определяется задача каждой конкретной сессии. Тема цикла сессий ежегодно формируется организаторами сессий
+        исходя из актуальной проблематики. Организаторы ПАСа также формулируют требования к содержанию, которое должно
+        быть получено или проработано на каждой конкретной сессии</p>
     </div>
     <div class="wrapper">
       <div class="container">
-        <button class="button">ПРЯМАЯ ТРАНСЛЯЦИЯ</button>
-        <button class="button">Сборник ПАС</button>
-        <button class="button">ПАС-1</button>
-        <button class="button">ПАС-2</button>
-        <button class="button">ПАС-3</button>
-        <button class="button">ПАС-4</button>
-        <button class="button">ПАС-5</button>
-        <button class="button">ПАС-6</button>
+        <button class="button activate-popup" data-popup="popup-live">ПРЯМАЯ ТРАНСЛЯЦИЯ</button>
+        <button class="button activate-popup" data-popup="popup-pas-collection">Сборник ПАС</button>
+        <a href="pas-1.html">
+          <button class="button">ПАС-1</button>
+        </a>
+        <a href="pas-2.html">
+          <button class="button">ПАС-2</button>
+        </a>
+        <a href="pas-3.html">
+          <button class="button">ПАС-3</button>
+        </a>
+        <a href="pas-4.html">
+          <button class="button">ПАС-4</button>
+        </a>
+        <a href="pas-5.html">
+          <button class="button">ПАС-5</button>
+        </a>
+        <a href="pas-6.html">
+          <button class="button">ПАС-6</button>
+        </a>
       </div>
       <div class="container">
         <p class="text">Принять участие можно в ONLINE и OFFLINE формате, подключившись в конференцию Zoom по <a
@@ -37,6 +53,8 @@
   </main>
 
   <footer class="footer"></footer>
+
+  <div class="popup popup-feedback"></div>
 
   <script type="module" src="js/pages/pas.js"></script>
 </body>
