@@ -1,20 +1,10 @@
 @import url(../global.css);
 
 .container {
-  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: 1.3rem;
-  padding: 2.6rem;
   max-width: 52.5rem;
-  border-radius: 1.6rem;
-  box-shadow: var(--box-shadow);
-  background: var(--bg-white);
-}
-
-.container:nth-last-child(1) {
-  margin-bottom: 2.6em;
 }
 
 .wrapper {
@@ -30,22 +20,6 @@
   .container {
     border-radius: 0;
   }
-}
-
-.button {
-  padding: 1rem 1.8rem;
-  border: 0;
-  border-radius: .8rem;
-  font-family: var(--ff-medium);
-  font-size: var(--fs-300);
-  color: var(--text-white);
-  cursor: pointer;
-  background: var(--primary);
-  transition: var(--transition);
-}
-
-.button:hover {
-  background: var(--primary-hover);
 }
 
 .text {
