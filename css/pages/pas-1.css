@@ -1,22 +1,5 @@
 @import url(../global.css);
 
-.wrapper {
-  align-items: start;
-}
-
-.intro-container__description {
-  width: 100%;
-}
-
-.text__list {
-  list-style-type: none;
-}
-
-.text__item {
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
-}
-
 .tasks {
   max-width: calc(820px - 276px);
 }
@@ -71,6 +54,17 @@
 @media screen and (max-width: 344px) {
   .files {
     border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .files {
+    width: 100%;
+  }
+
+  .files .wrapper {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
