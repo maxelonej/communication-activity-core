@@ -48,7 +48,8 @@
   --fs-600: clamp(2.2rem, 3vw, 2.4rem);
   --fs-500: clamp(1.8rem, 2.5vw, 2.2rem);
   --fs-550: clamp(1.5rem, 2vw, 1.85rem);
-  --fs-400: clamp(1.3rem, 1.5vw, 1.5rem);
+  --fs-450: clamp(1.45rem, 2vw, 1.65rem);
+  --fs-400: clamp(1.4rem, 1.5vw, 1.5rem);
   --fs-300: clamp(1.3rem, 1.8vw, 1.4rem);
   --box-shadow: 0px 4px 4px #00000040;
 }
@@ -304,21 +305,26 @@ img {
 /* End of header */
 
 /* Start of intro  */
-.intro-container {
+.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-top: calc(5.6rem + 2.6rem);
   padding-block: 2.6rem;
-  border-radius: 1.6rem;
+  margin-top: calc(5.6rem + 2.6rem);
   gap: 1.3rem;
+  border-radius: 1.6rem;
   box-shadow: var(--box-shadow);
   background: var(--bg-white);
 }
 
-.intro-container__description {
+.intro__title {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-600);
+}
+
+.intro__text {
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
   line-height: 1.7rem;
@@ -326,30 +332,25 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .intro-container {
+  .intro {
     border-radius: 0;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .intro-container {
+  .intro {
     padding-inline: .6rem;
   }
 
-  .intro-container__description {
+  .intro__text {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .intro-container__description {
+  .intro__text {
     width: 95%;
   }
-}
-
-.intro-container__title {
-  font-family: var(--ff-bold);
-  font-size: var(--fs-600);
 }
 
 /* End of intro  */
@@ -503,16 +504,48 @@ img {
 
 /* End of popup */
 
+/* Start of reusable styles */
+
+/* Wrapper */
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  margin: 0 auto;
+}
+
 /* Container */
 .container {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap row;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 2.6rem;
   gap: 1.3rem;
   border-radius: 1.6rem;
   box-shadow: var(--box-shadow);
   background: var(--bg-white);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .container {
+    margin-inline: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container {
+    border-radius: 0;
+  }
 }
 
 /* Title */
@@ -521,45 +554,38 @@ img {
   font-size: var(--fs-500);
 }
 
-/* Text */
-.texts {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  gap: 1.3rem;
+.title--text {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-450);
 }
 
+.title-text {
+  font-family: var(--ff-medium);
+  font-size: var(--fs-300);
+}
+
+/* Text */
 .text {
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
 }
 
-.text__title {
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
+.link {
+  color: var(--blue);
 }
 
-.text__list {
-  list-style-type: none;
+/* ul */
+.list {
+  list-style-type: none
 }
 
-.text__item {
+/* li */
+.item {
   font-family: var(--ff-regular);
   font-size: var(--fs-400);
 }
 
 /* Button */
-.buttons {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  gap: 1.3rem;
-}
-
 .button {
   padding: 1rem 1.8rem;
   border: 0;
@@ -575,3 +601,15 @@ img {
 .button:hover {
   background: var(--primary-hover);
 }
+
+.button-link {
+  padding: .8rem;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.button-link:hover .button {
+  background: var(--primary-hover);
+}
+
+/* End of reusable styles */

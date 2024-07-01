@@ -1,7 +1,20 @@
 @import url(../global.css);
 
+.wrapper {
+  align-items: start;
+}
+
 .intro-container__description {
   width: 100%;
+}
+
+.text__list {
+  list-style-type: none;
+}
+
+.text__item {
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
 }
 
 .tasks {
@@ -80,6 +93,7 @@
 .file__info {
   display: flex;
   flex-direction: column;
+  text-align: left;
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
 }
@@ -97,6 +111,21 @@
 /* files fileinfo p */
 .file__text {
   color: var(--line);
+}
+
+/* ul */
+.tasks .list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style-type: none
+}
+
+/* li */
+.tasks .item {
+  text-align: left;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
 }
 
 /* videos */

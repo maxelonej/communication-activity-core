@@ -2,87 +2,12 @@
 @import url(../global.css);
 
 /* Styles only for index.html */
-/* Start of projects */
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2.6rem;
-}
-
-.project {
-  display: flex;
+.container {
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  text-align: center;
-  flex: 0 0 30%;
-  border-radius: 3.5rem;
-  gap: 1.3rem;
-  padding: 2.6rem 1.3rem;
-  box-shadow: var(--box-shadow);
-  background: var(--bg-white);
 }
 
-.project__title {
-  font-family: var(--ff-bold);
-  font-size: var(--fs-500);
-  /* margin-bottom: 13px; */
+.text {
+  max-width: 371px;
+  margin-bottom: calc(1.3rem / 2);
 }
-
-.project__description {
-  max-width: 325px;
-  font-family: var(--ff-regular);
-  font-size: var(--fs-300);
-  /* margin-bottom: 1.8rem; */
-}
-
-.project__link {
-  padding: .8rem;
-  padding-bottom: 0;
-}
-
-.project__link:hover .project__button {
-  background: var(--primary-hover);
-  scale: 1.05;
-  rotate: -1deg;
-}
-
-.project__button {
-  padding: 1rem 1.8rem;
-  border: 0;
-  border-radius: 8px;
-  color: var(--text-white);
-  background: var(--primary);
-  font-family: var(--ff-medium);
-  font-size: var(--fs-300);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.project__button:hover {
-  background: var(--primary-hover);
-}
-
-@media screen and (max-width: 1200px) {
-  .project {
-    flex: auto;
-    margin-inline: 1rem;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .project {
-    margin-inline: 0;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .project {
-    border-radius: 0;
-  }
-}
-
-/* End of projects */

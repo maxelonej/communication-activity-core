@@ -1,32 +1,13 @@
 @import url(../global.css);
 
 .container {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 52.5rem;
+  justify-content: start;
+  gap: calc(1.3rem - .8rem);
+  max-width: 500px;
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 2.6rem;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 500px) {
   .container {
     border-radius: 0;
   }
-}
-
-.text {
-  font-family: var(--ff-medium);
-  font-size: var(--fs-300);
-}
-
-.text__link {
-  color: var(--blue);
 }
