@@ -14,14 +14,29 @@ groupPopups.forEach((groupPopup) => {
             <li class="item">• Иванов Иван Иванович</li>
             <li class="item">• Иванов Иван Иванович</li>
             <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван Иванович</li>
           </ul>
         </div>
-        <div>
-          <h2 class="title-text">Тьютор группы</h2>
-          <ul class="list">
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-          </ul>
+        <div class="staff">
+          <div>
+            <h2 class="title-text">Тьютор группы</h2>
+            <ul class="list">
+              <li class="item">• Иванов Иван Иванович</li>
+              <li class="item">• Иванов Иван Иванович</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="title-text">Тьютор группы</h2>
+            <ul class="list">
+              <li class="item">• Иванов Иван Иванович</li>
+              <li class="item">• Иванов Иван Иванович</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="wrapper">
