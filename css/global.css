@@ -82,6 +82,8 @@ body {
 img {
   width: 100%;
   height: auto;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-300);
 }
 
 /* Start of header */
