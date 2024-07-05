@@ -537,22 +537,14 @@ img {
   background: var(--bg-white);
 }
 
-@media screen and (max-width: 1200px) {
-  .box .container {
-    margin-inline: 1rem;
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2.6rem 1.3rem;
   }
 }
 
-@media screen and (max-width: 770px) {
-  .box .container {
-    margin-inline: 0;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .box .container {
-    border-radius: 0;
-  }
+.container[data-type="full"] {
+  border-radius: 0;
 }
 
 /* Title */
