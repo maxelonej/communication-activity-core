@@ -28,6 +28,33 @@
   font-display: swap;
 }
 
+/* @media (min-width: 991px) { */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #3c3a5b;
+}
+
+::-ms-scrollbar {
+  width: 12px;
+}
+
+::-ms-scrollbar-track {
+  background: var(--primary);
+}
+
+::-ms-scrollbar-thumb {
+  border-radius: 3px;
+  background: #3c3a5b;
+}
+
 /* Variables */
 
 :root {
