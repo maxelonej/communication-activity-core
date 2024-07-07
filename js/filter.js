@@ -59,6 +59,7 @@ searchInput.addEventListener("blur", () => {
 });
 
 clearIcon.addEventListener("click", () => {
+  clearIcon.classList.remove("active");
   searchInput.value = "";
   searchInput.focus();
   filterCompetencies(""); // reset filtering
