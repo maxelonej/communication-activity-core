@@ -26,17 +26,25 @@ backToFilters.addEventListener("click", () => {
 });
 
 // reset chosen filters
-const resetLink = document.querySelector(".reset-link");
+const resetCompetenciesFilters = document.querySelector(".reset-link");
+const resetAllFilters = document.querySelector(".reset-button");
 
-resetLink.addEventListener("click", () => {
+resetAllFilters.addEventListener("click", () => {
   const checkboxes = document.querySelectorAll(
     '.option input[type="checkbox"]'
   );
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
-  searchInput.value = "";
-  filterCompetencies(""); // reset filtering
+});
+
+resetCompetenciesFilters.addEventListener("click", () => {
+  const competenciesCheckboxes = document.querySelectorAll(
+    '.competencies-filters__filters .option input[type="checkbox"]'
+  );
+  competenciesCheckboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
 });
 
 // clear search input value
