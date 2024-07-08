@@ -20,7 +20,8 @@
   height: 16px;
   min-width: 16px;
   min-height: 16px;
-  color: white;
+  color: #fff;
+  background: #fff;
   border: 2px solid hsl(243 21% 41%);
   border-radius: .4rem;
   transition: all 250ms ease-in-out;
