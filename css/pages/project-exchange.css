@@ -223,6 +223,10 @@
   padding: 1.3rem;
 }
 
+.filter .text {
+  font-weight: bold;
+}
+
 .filter-1 {
   padding-bottom: 0.65rem;
 }
@@ -264,6 +268,7 @@
 .filter[data-type="competencies"] .more p {
   font-family: var(--ff-medium);
   color: var(--primary-hover);
+  font-weight: normal;
 }
 
 .options {
