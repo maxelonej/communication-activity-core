@@ -69,7 +69,7 @@ searchInput.addEventListener("blur", () => {
 clearIcon.addEventListener("click", () => {
   clearIcon.classList.remove("active");
   searchInput.value = "";
-  searchInput.focus();
+  // searchInput.focus();
   filterCompetencies(""); // reset filtering
 });
 
@@ -85,3 +85,39 @@ const filterCompetencies = (searchValue) => {
     }
   });
 };
+
+// exit from full page filters (mobile only)
+const exitFilters = document.querySelector(".exit-filters");
+const openFilters = document.querySelector(".open-filters");
+const openFiltersButton = document.querySelector(".open-filters .button");
+const filtersContainer = document.querySelector(".filters");
+
+exitFilters.addEventListener("click", () => {
+  filtersContainer.classList.remove("active");
+  if (window.innerWidth <= 600) {
+    document.body.style.overflow = "auto";
+  }
+});
+
+openFilters.addEventListener("click", () => {
+  filtersContainer.classList.add("active");
+  if (window.innerWidth <= 600) {
+    document.body.style.overflow = "hidden";
+  }
+});
+
+const mq = window.matchMedia("(max-width: 1075px)");
+
+document.addEventListener("click", (e) => {
+  if (
+    mq.matches &&
+    !openFiltersButton.contains(e.target) &&
+    !filtersContainer.contains(e.target)
+  ) {
+    filtersContainer.classList.remove("active");
+  }
+});
+
+// todo: add btn to get into full page filters
+// todo: add styles for full page filters
+// body overflow: hidden when full page filters are opened

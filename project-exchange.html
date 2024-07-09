@@ -107,12 +107,20 @@
           </a>
         </div>
       </div>
+      <div class="open-filters">
+        <button class="button">Фильтры</button>
+      </div>
       <div class="filters">
         <div class="all-filters">
           <div class="all-filters__filters">
+            <!-- for mobile exit -->
+            <div class="exit-filters">
+              <img class="arrow" src="img/arrow-left.svg" alt="Стрелка влево">
+              <p class="title">Фильтры</p>
+            </div>
 
             <!-- Filter 1 -->
-            <div class="filter">
+            <div class="filter filter-1">
               <!-- Name -->
               <label class="text" for="customer">Заказчик</label>
               <!-- Options -->
@@ -146,7 +154,7 @@
             </div>
 
             <!-- Filter 3 -->
-            <div class="filter">
+            <div class="filter filter-3">
               <!-- Name -->
               <label class="text" for="status">Статус</label>
               <!-- Options -->
@@ -227,21 +235,21 @@
 
         <!-- Competencies -->
         <div class="competencies-filters">
-          <div class="filter-header">
-            <div class="filter-header__arrow">
-              <img class="arrow" src="img/arrow-left.svg" alt="Стрелка влево">
-              <h3 class="title--text">Компетенции</h3>
-            </div>
-            <a class="reset-link text">сбросить</a>
-          </div>
-          <!-- search -->
-          <div class="search-filter-wrapper">
-            <input class="search-filter" placeholder="Фильтр по компетенциям" type="text" name="search-competencies"
-              id="search-competencies">
-            <img class="icon search-clear" src="img/close-circle.svg" alt="Очистить">
-          </div>
-          <!-- list of competencies -->
           <div class="competencies-filters__filters">
+            <div class="filter-header">
+              <div class="filter-header__arrow">
+                <img class="arrow" src="img/arrow-left.svg" alt="Стрелка влево">
+                <h3 class="title--text">Компетенции</h3>
+              </div>
+              <a class="reset-link text">сбросить</a>
+            </div>
+            <!-- search -->
+            <div class="search-filter-wrapper">
+              <input class="search-filter" placeholder="Фильтр по компетенциям" type="text" name="search-competencies"
+                id="search-competencies">
+              <img class="icon search-clear" src="img/close-circle.svg" alt="Очистить">
+            </div>
+            <!-- list of competencies -->
             <div class="options">
               <div class="option">
                 <div class="checkbox-wrapper">
@@ -299,6 +307,20 @@
                   <label class="text" for="customer-management">Маркетинговый анализ</label>
                 </div>
               </div>
+              <div class="option">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="direction-management" name="direction" />
+                  <div class="fake-checkbox"> <img src="img/check-mark.svg" alt="Галочка"> </div>
+                  <label class="text" for="customer-management">Маркетинговый анализ</label>
+                </div>
+              </div>
+              <div class="option">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="direction-management" name="direction" />
+                  <div class="fake-checkbox"> <img src="img/check-mark.svg" alt="Галочка"> </div>
+                  <label class="text" for="customer-management">Маркетинговый анализ</label>
+                </div>
+              </div>
             </div>
           </div>
           <!-- btn choose -->
@@ -307,7 +329,6 @@
           </div>
         </div>
       </div>
-    </div>
     </div>
   </main>
 
