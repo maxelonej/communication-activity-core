@@ -117,7 +117,3 @@ document.addEventListener("click", (e) => {
     filtersContainer.classList.remove("active");
   }
 });
-
-// todo: add btn to get into full page filters
-// todo: add styles for full page filters
-// body overflow: hidden when full page filters are opened
