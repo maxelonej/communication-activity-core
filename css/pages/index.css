@@ -2,6 +2,10 @@
 @import url(../global.css);
 
 /* Styles only for index.html */
+.wrapper {
+  align-items: start;
+}
+
 .container {
   flex-direction: column;
   justify-content: space-between;
@@ -9,5 +13,4 @@
 
 .text {
   max-width: 371px;
-  margin-bottom: calc(1.3rem / 2);
 }
