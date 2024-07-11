@@ -1,0 +1,9 @@
+@import url(../global.css);
+
+.container {
+  margin-bottom: 2.6rem;
+}
+
+.wrapper .button {
+  max-width: 256px;
+}
