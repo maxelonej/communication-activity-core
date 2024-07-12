@@ -8,33 +8,26 @@ groupPopups.forEach((groupPopup) => {
         <div>
           <h2 class="title-text">Состав группы</h2>
           <ul class="list">
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
-            <li class="item">• Иванов Иван Иванович</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
+            <li class="item">• Иванов Иван</li>
           </ul>
         </div>
         <div class="staff">
           <div>
             <h2 class="title-text">Тьютор группы</h2>
             <ul class="list">
-              <li class="item">• Иванов Иван Иванович</li>
-              <li class="item">• Иванов Иван Иванович</li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="title-text">Тьютор группы</h2>
-            <ul class="list">
-              <li class="item">• Иванов Иван Иванович</li>
-              <li class="item">• Иванов Иван Иванович</li>
+              <li class="item">• Иванов Иван</li>
+              <li class="item">• Иванов Иван</li>
             </ul>
           </div>
         </div>
