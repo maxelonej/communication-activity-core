@@ -10,6 +10,10 @@
   height: 24px;
 }
 
+.button-link {
+  padding-block: 0;
+}
+
 /* Projects wrapper */
 .wrapper[data-type="project"] {
   display: grid;
@@ -152,7 +156,7 @@
 
 .search-clear {
   position: absolute;
-  top: 25%;
+  top: 29%;
   right: 3%;
   cursor: pointer;
   scale: 0;
@@ -170,6 +174,7 @@
   border-block: 1.6px solid var(--line);
   width: 100%;
   padding-left: 1.3rem;
+  padding-right: 4.6rem;
   padding-block: 1.8rem;
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
