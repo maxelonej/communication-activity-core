@@ -484,7 +484,9 @@ img {
 }
 
 /* ul */
-.list {
+.list, ul[class] {
+  font-family: var(--ff-regular);
+  font-size: var(--fs-300);
   list-style-type: none
 }
 
