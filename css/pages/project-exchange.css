@@ -419,7 +419,7 @@ label.text {
   }
 
   .filter-button {
-    font-size: 12px;
+    font-size: 1.3rem;
   }
 
   .competencies-buttons {
@@ -523,7 +523,7 @@ label.text {
   }
 
   .filter-button {
-    padding-block: .8rem;
+    padding-block: .6rem;
   }
 
   .competencies-buttons {
