@@ -565,3 +565,64 @@ label.text {
     grid-template-columns: auto;
   }
 }
+
+.project-intro-content {
+  display: none;
+}
+
+.hover-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+  z-index: 1000;
+}
+
+@media screen and (min-width: 1024px) {
+  .container[data-type="project"] {
+    position: relative;
+    /* Add position: relative; to the project container */
+  }
+
+  .tooltip-container {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    gap: .5rem;
+    width: 300px;
+    min-height: 20px;
+    border: 1px solid black;
+    transform: translate(140%);
+    transition: var(--transition);
+  }
+
+  .tooltip-container>* {
+    font-size: 1.4rem;
+  }
+
+  .tooltip-container .text:nth-child(2) {
+    display: none;
+  }
+
+  .container[data-type="project"]:hover .tooltip-container {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tags {
+    display: none;
+  }
+}
