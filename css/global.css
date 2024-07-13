@@ -483,17 +483,15 @@ img {
   color: var(--blue);
 }
 
-/* ul */
-.list, ul[class] {
+/* ul, li */
+ul,
+li {
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
-  list-style-type: none
 }
 
-/* li */
-.item {
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
+ul[class] {
+  list-style-type: none
 }
 
 /* Button */
