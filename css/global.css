@@ -458,16 +458,19 @@ img {
 .title {
   font-family: var(--ff-bold);
   font-size: var(--fs-500);
+  font-weight: bold;
 }
 
 .title--text {
   font-family: var(--ff-bold);
   font-size: var(--fs-450);
+  font-weight: bold;
 }
 
 .title-text {
   font-family: var(--ff-medium);
   font-size: var(--fs-300);
+  font-weight: bold;
 }
 
 /* Text */
