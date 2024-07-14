@@ -590,6 +590,7 @@ label.text {
   .tooltip-container {
     position: absolute;
     opacity: 0;
+    z-index: 1;
     top: 0;
     left: 0;
     visibility: hidden;
