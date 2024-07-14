@@ -584,7 +584,6 @@ label.text {
 @media screen and (min-width: 1024px) {
   .container[data-type="project"] {
     position: relative;
-    /* Add position: relative; to the project container */
   }
 
   .tooltip-container {
