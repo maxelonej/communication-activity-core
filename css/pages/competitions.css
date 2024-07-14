@@ -43,7 +43,34 @@
   transition: var(--transition);
 }
 
-
 .search-competition img:nth-child(3).active {
   scale: 1;
+}
+
+.container[data-type="competition"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 372px;
+  padding: 0;
+  border-radius: 11px;
+}
+
+.container[data-type="competition"] img {
+  max-height: 248.53px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.competition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  padding-inline: 2.6rem;
+  margin-bottom: 2.6rem;
+}
+
+.period {
+  color: var(--line);
+  font-family: var(--ff-medium);
 }
