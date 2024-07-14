@@ -59,6 +59,7 @@
   max-height: 248.53px;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
+  pointer-events: none;
 }
 
 .competition-content {
