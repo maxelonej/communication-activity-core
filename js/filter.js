@@ -5,7 +5,7 @@ const competencies = document.querySelector(
   ".filter[data-type='competencies']"
 );
 
-// comptenecies content
+// competencies content
 const filtersCompetencies = document.querySelector(".competencies-filters");
 
 // filter competencies in filters
