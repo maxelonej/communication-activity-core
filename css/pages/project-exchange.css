@@ -39,6 +39,7 @@
 .container[data-type="project"] {
   width: 100%;
   max-width: 400px;
+  flex-direction: column;
 }
 
 /* Filters */
@@ -235,7 +236,7 @@
   padding-bottom: 0.65rem;
 }
 
-.filter-3 {
+.filter-status {
   padding-block: 0.65rem;
 }
 
