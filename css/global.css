@@ -572,6 +572,10 @@ ul[class] {
   .footer__wrapper {
     margin: 0;
   }
+
+  .header__links-link:nth-last-child(2) {
+    padding-right: 1rem;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -585,10 +589,6 @@ ul[class] {
   /* Burger icon in header */
   .header__burger-open {
     display: block;
-  }
-
-  .header__links-link:nth-last-child(2) {
-    padding-right: 1rem;
   }
 }
 
