@@ -474,7 +474,8 @@ img {
 }
 
 /* Text */
-.text {
+.text,
+.link {
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
 }
