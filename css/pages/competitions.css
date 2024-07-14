@@ -1,0 +1,49 @@
+@import url(../global.css);
+
+.container[data-type="full"] {
+  margin-bottom: 2.6rem;
+}
+
+.search-competition {
+  position: relative;
+}
+
+.search-competition input {
+  padding-block: 18px;
+  padding-left: 46px;
+  padding-right: 46px;
+  border: 1px solid var(--line);
+  font-family: var(--ff-regular);
+  font-size: var(--fs-300);
+  outline: none;
+}
+
+.search-competition input:hover,
+.search-competition input:focus {
+  border: 1px solid black;
+}
+
+.search-competition img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.search-competition img:nth-child(2) {
+  top: 14px;
+  left: 12px;
+  opacity: .5;
+}
+
+.search-competition img:nth-child(3) {
+  top: 14px;
+  right: 12px;
+  cursor: pointer;
+  scale: 0;
+  transition: var(--transition);
+}
+
+
+.search-competition img:nth-child(3).active {
+  scale: 1;
+}
