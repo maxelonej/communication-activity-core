@@ -1,0 +1,13 @@
+@import url(./project-exchange.css);
+
+@media screen and (min-width: 1024px) {
+  .tooltip-container {
+    top: 0;
+    left: 0;
+    /* opacity: 1;
+    visibility: visible; */
+    top: 8%; /* adjust this value to position the tooltip vertically */
+    left: 110%; /* adjust this value to position the tooltip horizontally */
+    transform: translate(0, -50%); /* adjust this value to fine-tune the position */
+  }
+}
