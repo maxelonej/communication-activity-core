@@ -608,14 +608,14 @@ label.text {
     border: 1px solid black;
     transform: translate(140%);
     transition: var(--transition);
-  }
 
-  .tooltip-container>* {
-    font-size: 1.4rem;
-  }
+    >* {
+      font-size: 1.4rem;
+    }
 
-  .tooltip-container .text:nth-child(2) {
-    display: none;
+    .text:nth-child(2) {
+      display: none;
+    }
   }
 
   .container[data-type="project"]:hover .tooltip-container {
