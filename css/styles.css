@@ -333,7 +333,7 @@ img {
 }
 
 .container[data-type="groups"] {
-  width: calc(100% / 2);
+  width: 70rem;
   max-width: 100%;
 }
 
@@ -345,16 +345,10 @@ img {
   gap: 1.3rem;
 }
 
-@media screen and (max-width: 540px) {
-  .container[data-type="groups"]>.wrapper>.button {
-    width: 100%;
-    padding-block: 1.5rem;
-  }
-}
-
 .container[data-type="tasks"] {
+  justify-content: start;
   flex-direction: column;
-  width: 30rem;
+  width: 42rem;
   max-width: 100%;
 }
 
@@ -372,7 +366,7 @@ img {
 }
 
 .container[data-type="videos"] {
-  width: 75rem;
+  width: 100rem;
   max-width: 100%;
   align-items: center;
   justify-content: center;
@@ -436,15 +430,16 @@ img {
   align-items: center;
   justify-content: center;
   gap: 2.6rem;
+  width: 38rem;
 }
 
 .container[data-type="files"] .wrapper {
   align-items: center;
   justify-content: flex-start;
-  margin-inline: auto;
-  margin-bottom: 0;
   gap: 2.6rem;
-  width: 50%;
+  margin-inline: 0;
+  margin-bottom: 0;
+  width: 36rem;
 }
 
 /* End of containers  */
@@ -754,6 +749,11 @@ ul[class] {
 
   .container[data-type="intro"]>.text {
     max-width: 90%;
+  }
+
+  .container[data-type="groups"]>.wrapper>.button {
+    width: 100%;
+    padding-block: 1.5rem;
   }
 }
 
