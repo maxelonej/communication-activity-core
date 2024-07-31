@@ -1,32 +1,4 @@
-@import url(../global.css);
-@import url(../elements/checkbox.css);
-
-.container {
-  margin-bottom: 2.6rem;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-}
-
-.button-link {
-  padding-block: 0;
-}
-
-/* Projects wrapper */
-.wrapper[data-type="project"] {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-auto-columns: auto;
-  grid-auto-flow: dense;
-  place-items: start;
-  gap: 2.6rem;
-}
-
-.wrapper[data-type="project"] .container {
-  margin-bottom: 0;
-}
+@import url(./elements/checkbox.css);
 
 /* Projects */
 .projects {
@@ -34,12 +6,6 @@
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 2.6rem;
-}
-
-.container[data-type="project"] {
-  width: 100%;
-  max-width: 400px;
-  flex-direction: column;
 }
 
 /* Filters */
@@ -56,19 +22,12 @@
   height: fit-content;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  border: 1px solid var(--primary-hover);
 }
 
 .filters.active {
   transform: translateX(0);
   visibility: visible;
-}
-
-
-::-webkit-scrollbar-thumb {
-  border-radius: 3px;
-  background: #3c3a5b;
 }
 
 .all-filters,
@@ -82,8 +41,13 @@
   height: 100%;
   padding: 0;
   background: var(--bg-white);
-  animation: fade .5s ease;
   transition: var(--transition);
+}
+
+.all-filters:hover,
+.competencies-filters:hover,
+.filters:hover .filter-buttons {
+  background: var(--bg-white);
 }
 
 .competencies-filters__filters,
@@ -262,7 +226,6 @@
 
 .filter[data-type="competencies"]:hover {
   background: var(--bg-gray);
-  box-shadow: var(--box-shadow);
 }
 
 .filter[data-type="competencies"] .more {
@@ -302,12 +265,12 @@ label.text {
   bottom: 0;
   left: 0;
   right: 0; */
-  align-items: center;
-  padding-inline: 2.6rem;
-  justify-content: center;
-  background: var(--bg-white);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2.6rem;
   gap: 1.3rem;
+  background: var(--bg-white);
 }
 
 .filter-buttons.active {
@@ -598,7 +561,6 @@ label.text {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     align-items: start;
     text-align: left;

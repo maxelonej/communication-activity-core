@@ -1,5 +1,3 @@
-@import url(../../global.css);
-
 .wrapper {
   align-items: start;
   justify-content: start;
@@ -22,12 +20,22 @@
 }
 
 .container[data-type="project-intro"] {
-  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
   margin-bottom: 2.6rem;
+  width: 100%;
   border-radius: 0;
+  border-inline: 0;
 }
 
-/* .container[data-type="stages"] {} */
+.container[data-type="project-intro"] .text {
+  width: auto;
+}
+
+.container[data-type="stages"] {
+  flex-direction: column;
+}
 
 .tags {
   display: flex;
@@ -60,6 +68,7 @@
 .stage {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 1.3rem;
 }
 
@@ -73,12 +82,14 @@
 }
 
 .container[data-type="list"] {
+  flex-direction: column;
   align-items: center;
 }
 
 .list__columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.3rem;
 }
 

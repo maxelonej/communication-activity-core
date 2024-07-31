@@ -1,3 +1,6 @@
+@import url(./project-filters.css);
+@import url(./projects.css);
+
 /* Fonts */
 
 @font-face {
@@ -37,7 +40,8 @@
   --text-white: #fff;
   --text-black: #000;
   --bg-white: #fff;
-  --bg-gray: #f2f2f3;
+  --bg-gray: #F3F5FB;
+  --bg-hover: #fdfcfc;
   --line: #808080;
   --blue: #3042dc;
   --border-mint: #dbe5e6;
@@ -118,6 +122,11 @@ img {
   height: auto;
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }
 
 /* Start of header */
@@ -287,10 +296,23 @@ img {
   gap: 1.3rem;
   max-width: 100%;
   flex-grow: 1;
-  animation: transitionIn .75s forwards;
-  border-radius: 1.6rem;
+  /* animation: transitionIn .75s forwards; */
   border: 1px solid var(--primary-hover);
+  border-radius: 1.6rem;
   background: var(--bg-white);
+}
+
+/* .container:hover {
+  background: var(--bg-hover);
+} */
+
+/* styles for touch screen */
+@media (hover: none) {
+  .container {
+    box-shadow: none;
+    /* disable hover effect */
+    pointer-events: none;
+  }
 }
 
 .container .text {
@@ -319,11 +341,12 @@ img {
 }
 
 .container[data-type="full"] {
+  margin-bottom: 2.6rem;
   border-radius: 0;
 }
 
 .container[data-type="buttons"] {
-  width: 111rem;
+  width: 75rem;
   gap: calc(1.3rem - .8rem);
   justify-content: center;
 }
@@ -383,6 +406,12 @@ img {
   }
 }
 
+.container[data-type="project"] {
+  width: 100%;
+  max-width: 400px;
+  flex-direction: column;
+}
+
 /* files file */
 .file {
   display: flex;
@@ -440,6 +469,15 @@ img {
   margin-inline: 0;
   margin-bottom: 0;
   width: 36rem;
+}
+
+.container[data-type="link"] {
+  width: 30rem;
+  max-width: 100%;
+}
+
+.container[data-type="link"] .text {
+  width: auto;
 }
 
 /* End of containers  */
@@ -592,9 +630,23 @@ img {
   display: flex;
   flex-flow: row wrap;
   align-items: normal;
+  justify-content: center;
   gap: 2.6rem;
   margin-inline: 2.6rem;
   margin-bottom: 2.6rem;
+}
+
+.wrapper[data-type="project"] {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-auto-columns: auto;
+  grid-auto-flow: dense;
+  place-items: start;
+  gap: 2.6rem;
+}
+
+.wrapper[data-type="project"] .container {
+  margin-bottom: 0;
 }
 
 /* Title */
@@ -635,6 +687,7 @@ li {
 }
 
 ul[class] {
+  text-align: left;
   list-style-type: none
 }
 

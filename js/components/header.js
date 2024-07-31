@@ -82,35 +82,3 @@ headers.forEach((header) => {
     </div>
   `;
 });
-
-// burger content
-const burgerContent = document.querySelector(".header__burger-content");
-// burger icon in header
-const burger = document.querySelector(".header__burger-open");
-
-burger.addEventListener("click", () => {
-  burgerContent.classList.add("active");
-});
-
-document
-  .querySelector(".header__burger-close")
-  .addEventListener("click", () => {
-    burgerContent.classList.remove("active");
-  });
-
-document.addEventListener("click", (e) => {
-  if (!burgerContent.contains(e.target) && !burger.contains(e.target)) {
-    burgerContent.classList.remove("active");
-  }
-});
-
-// set navigation link active
-const currentPage = window.location.pathname.split("/").pop();
-const navLinks = document.querySelectorAll(".header__nav-link");
-
-navLinks.forEach((link) => {
-  const linkUrl = new URL(link.href, window.location.origin);
-  if (linkUrl.pathname.endsWith(`/${currentPage}`)) {
-    link.classList.add("active");
-  }
-});
