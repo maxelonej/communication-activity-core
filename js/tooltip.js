@@ -18,6 +18,7 @@ if (mediaQueryList.matches) {
           const projectIntroContainer = doc.querySelector(
             '.container[data-type="project-intro"]'
           );
+
           if (projectIntroContainer) {
             // title
             const titleElements =
@@ -36,6 +37,8 @@ if (mediaQueryList.matches) {
 
             const tooltipContent = projectIntroContainer.innerHTML;
             tooltipContainer.innerHTML = tooltipContent;
+          } else {
+            tooltipContainer.innerHTML = `<p class="text">${link.href.substring(link.href.lastIndexOf("/") + 1)} не найден...</p>`;
           }
         });
     });
