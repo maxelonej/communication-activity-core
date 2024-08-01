@@ -563,6 +563,127 @@ img {
   font-family: var(--ff-medium);
 }
 
+.container[data-type="desc"] {
+  flex-direction: column;
+  width: 50rem;
+  max-width: 100%;
+}
+
+.container[data-type="desc"] .text {
+  width: auto;
+}
+
+.container[data-type="desc-2"] {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.container[data-type="links"] {
+  gap: 2.6rem;
+}
+
+.items,
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+}
+
+.wrapper[data-type="competence"] {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: start;
+  grid-auto-flow: row dense; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  margin-inline: 0;
+}
+
+.container[data-type="competence"] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: calc(2.6rem + 1.3rem);
+  width: 400px;
+  max-width: 100%;
+  color: var(--text-black);
+  border: 1px solid var(--primary-hover);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.container-link {
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+.container[data-type="competence"] .text {
+  padding-bottom: 1.3rem;
+}
+
+.container[data-type="competence"] img {
+  position: absolute;
+  bottom: 16px;
+  right: 10px;
+  align-self: flex-end;
+  transform: translateX(-20%);
+  width: 60px;
+  height: 26px;
+  transition: var(--transition);
+}
+
+.container[data-type="competence"]:hover .title {
+  text-decoration: underline;
+}
+
+.container[data-type="competence"]:hover img {
+  transform: translateX(0);
+}
+
+@media (max-width: 1440px) {
+  .wrapper[data-type="competence"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper[data-type="competence"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper[data-type="desc"] {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container[data-type="desc"] {
+    border-inline: 0;
+    border-radius: 0;
+  }
+
+  .container[data-type="competence"] img {
+    width: 40px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper[data-type="competence"] {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* End of containers  */
 
 /* Start of footer */
