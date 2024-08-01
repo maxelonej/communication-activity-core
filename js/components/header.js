@@ -5,7 +5,7 @@ headers.forEach((header) => {
     <div class="header__wrapper">
       <!-- logo -->
       <a class="header__logo-link" href="index.html">
-        <img class="header__logo" src="img/logo.svg" alt="Лого">
+        <img class="header__logo" src="/img/logo.svg" alt="Лого">
       </a>
       <!-- navigation -->
       <nav class="header__nav">
@@ -36,14 +36,14 @@ headers.forEach((header) => {
       <!-- links -->
       <div class="header__links">
         <a class="header__links-link" href="calendar.html">
-          <img class="header__links-icon" src="img/calendar.svg" alt="Календарь мероприятий">
+          <img class="header__links-icon" src="/img/calendar.svg" alt="Календарь мероприятий">
         </a>
         <a class="header__links-link" href="profile.html">
-          <img class="header__links-icon" src="img/profile.svg" alt="Профиль">
+          <img class="header__links-icon" src="/img/profile.svg" alt="Профиль">
         </a>
         <!-- burger menu -->
         <div id="burger" class="header__links-link header__burger-open">
-          <img class="header__links-icon header__burger-open-icon" src="./img/burger-open.svg" alt="Открыть меню">
+          <img class="header__links-icon header__burger-open-icon" src="/img/burger-open.svg" alt="Открыть меню">
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@ headers.forEach((header) => {
     <div class="header__burger-content">
       <nav class="header__burger__nav">
         <div class="header__burger-close">
-          <img class="header__burger-close-icon" src="img/burger-close.svg" alt="Закрыть меню">
+          <img class="header__burger-close-icon" src="/img/burger-close.svg" alt="Закрыть меню">
         </div>
         <ul class="header__burger__nav-list">
           <!-- burger menu -->
