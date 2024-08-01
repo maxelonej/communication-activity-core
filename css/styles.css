@@ -1275,7 +1275,7 @@ ul[class] {
 }
 
 .filter[data-type="competencies"]:hover {
-  background: var(--bg-gray);
+  background: #55537e40;
 }
 
 .filter[data-type="competencies"] .more {
