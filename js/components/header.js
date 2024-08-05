@@ -4,41 +4,41 @@ headers.forEach((header) => {
   header.innerHTML = `
     <div class="header__wrapper">
       <!-- logo -->
-      <a class="header__logo-link" href="index.html">
+      <a class="header__logo-link" href="/index.html">
         <img class="header__logo" src="/img/logo.svg" alt="Лого">
       </a>
       <!-- navigation -->
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="pas.html">ПАС</a>
+            <a class="header__nav-link" href="/pages/pas.html">ПАС</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="project-exchange.html">Биржа проектов</a>
+            <a class="header__nav-link" href="/pages/project-exchange.html">Биржа проектов</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="competitions.html">Конкурсы</a>
+            <a class="header__nav-link" href="/pages/competitions.html">Конкурсы</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="taomskills.html">TaomSkills</a>
+            <a class="header__nav-link" href="/pages/taomskills.html">TaomSkills</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="internships.html">Практики и стажировки</a>
+            <a class="header__nav-link" href="/pages/internships.html">Практики и стажировки</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="scientific-conferences.html">Научные конференции</a>
+            <a class="header__nav-link" href="/pages/scientific-conferences.html">Научные конференции</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="competencies.html">Компетенции</a>
+            <a class="header__nav-link" href="/pages/competencies.html">Компетенции</a>
           </li>
         </ul>
       </nav>
       <!-- links -->
       <div class="header__links">
-        <a class="header__links-link" href="calendar.html">
+        <a class="header__links-link" href="/pages/calendar.html">
           <img class="header__links-icon" src="/img/calendar.svg" alt="Календарь мероприятий">
         </a>
-        <a class="header__links-link" href="profile.html">
+        <a class="header__links-link" href="/pages/profile.html">
           <img class="header__links-icon" src="/img/profile.svg" alt="Профиль">
         </a>
         <!-- burger menu -->
@@ -57,25 +57,25 @@ headers.forEach((header) => {
         <ul class="header__burger__nav-list">
           <!-- burger menu -->
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="pas.html">ПАС</a>
+            <a class="header__burger__nav-link" href="/pages/pas.html">ПАС</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="project-exchange.html">Биржа проектов</a>
+            <a class="header__burger__nav-link" href="/pages/project-exchange.html">Биржа проектов</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="competition.html">Конкурсы</a>
+            <a class="header__burger__nav-link" href="/pages/competition.html">Конкурсы</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="taomskills.html">TaomSkills</a>
+            <a class="header__burger__nav-link" href="/pages/taomskills.html">TaomSkills</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="internships.html">Практики и стажировки</a>
+            <a class="header__burger__nav-link" href="/pages/internships.html">Практики и стажировки</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="scientific-conferences.html">Научные конференции</a>
+            <a class="header__burger__nav-link" href="/pages/scientific-conferences.html">Научные конференции</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="competencies.html">Компетенции</a>
+            <a class="header__burger__nav-link" href="/pages/competencies.html">Компетенции</a>
           </li>
         </ul>
       </nav>
