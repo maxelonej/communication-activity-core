@@ -686,6 +686,11 @@ img {
 
 /* <div class="container" data-type="column conference-buttons"> */
 
+
+.container[data-type="conference-buttons"] {
+  align-items: normal;
+}
+
 .container[data-type="conference-buttons"] .button {
   max-width: 36.5rem;
 }
