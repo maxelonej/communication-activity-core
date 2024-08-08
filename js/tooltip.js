@@ -35,6 +35,13 @@ if (mediaQueryList.matches) {
               tagsElement.style.display = "none";
             });
 
+            // buttons
+            const buttonsElements =
+              projectIntroContainer.querySelectorAll(".button");
+            buttonsElements.forEach((buttonsElement) => {
+              buttonsElement.style.display = "none";
+            });
+
             const tooltipContent = projectIntroContainer.innerHTML;
             tooltipContainer.innerHTML = tooltipContent;
           } else {
