@@ -684,9 +684,6 @@ img {
   }
 }
 
-/* <div class="container" data-type="column conference-buttons"> */
-
-
 .container[data-type="conference-buttons"] {
   align-items: normal;
 }
