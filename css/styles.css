@@ -573,12 +573,17 @@ img {
   width: auto;
 }
 
-.container[data-type="desc-2"] {
+.container[data-type="desc-2"],
+.container[data-type="desc-3"] {
   display: flex;
   flex-direction: column;
   align-items: start;
   width: 20rem;
   max-width: 100%;
+}
+
+.container[data-type="desc-3"] {
+  align-items: center;
 }
 
 .container[data-type="links"] {
@@ -922,9 +927,11 @@ ul[class] {
 }
 
 .button-link {
+  display: flex;
   padding-top: .8rem;
   padding-inline: 2rem;
   padding-bottom: 0;
+  text-decoration: none;
   cursor: pointer;
 }
 
