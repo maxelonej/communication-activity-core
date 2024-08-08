@@ -8,5 +8,5 @@ import "./clear-input.js";
 import "./filter.js";
 import "./nav.js";
 import "./popups.js";
-import "./search-competencies.js";
+import "./search.js";
 import "./tooltip.js";
