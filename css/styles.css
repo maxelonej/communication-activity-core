@@ -723,6 +723,37 @@ img {
   padding: 0;
 }
 
+.container[data-type="profile"] {
+  flex-grow: 0;
+  align-items: start;
+  width: 76rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container[data-type="profile"] label,
+.container[data-type="profile"] input {
+  display: block;
+}
+
+.container[data-type="profile"] label {
+  color: var(--line);
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
+}
+
+.container[data-type="profile"] input {
+  width: 17.2rem;
+  height: 3.2rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
+  border-radius: 5px;
+  padding-inline: .6rem;
+  outline: none;
+  border: 1px solid var(--primary-hover);
+  background: var(--bg-gray);
+}
+
 /* End of containers  */
 
 /* Start of footer */
@@ -1419,6 +1450,19 @@ label.text {
 
 .open-filters .button {
   width: 80%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: .6rem;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 1400px) {

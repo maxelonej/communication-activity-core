@@ -123,9 +123,7 @@
 }
 
 .attach-files:hover {
-  border: 2px dashed var(--primary);
-  border-radius: 8px;
-  background: #44426643;
+  background: var(--bg-hover);
 }
 
 .attach-files .title-text {
