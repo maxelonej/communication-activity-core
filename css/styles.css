@@ -93,6 +93,18 @@
   }
 }
 
+@keyframes to-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -349,6 +361,10 @@ img {
   margin-bottom: 2.6rem;
   border-inline: 0;
   border-radius: 0;
+}
+
+.wrapper[data-type="full"] {
+  margin-inline: 0;
 }
 
 .container[data-type="buttons"] {
@@ -695,6 +711,16 @@ img {
 
 .container[data-type="conference-buttons"] .button {
   max-width: 36.5rem;
+}
+
+.container[data-type="no-grow"] {
+  width: 90rem;
+  max-width: 100%;
+  flex-grow: 0;
+}
+
+.container[data-type="no-grow"] .button-link {
+  padding: 0;
 }
 
 /* End of containers  */
