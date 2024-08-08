@@ -41,7 +41,7 @@
   --text-black: #000;
   --bg-white: #fff;
   --bg-gray: #F3F5FB;
-  --bg-hover: #fdfcfc;
+  --bg-hover: #f9fafd;
   --line: #808080;
   --blue: #3042dc;
   --border-mint: #dbe5e6;
@@ -304,12 +304,12 @@ img {
   /* animation: transitionIn .75s forwards; */
   border: 1px solid var(--primary-hover);
   border-radius: 1.6rem;
-  background: var(--bg-white);
+  background: var(--bg-hover);
 }
 
-/* .container:hover {
-  background: var(--bg-hover);
-} */
+.container:hover {
+  background: var(--bg-white);
+}
 
 /* styles for touch screen */
 @media (hover: none) {
@@ -1632,9 +1632,5 @@ label.text {
   .container[data-type="project"]:hover .tooltip-container {
     opacity: 1;
     visibility: visible;
-  }
-
-  .tags {
-    display: none;
   }
 }
