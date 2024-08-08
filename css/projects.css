@@ -56,7 +56,7 @@
 }
 
 .tag:hover {
-  background: rgb(226, 225, 225);
+  background: var(--bg-white);
 }
 
 .stages {
