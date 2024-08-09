@@ -1465,6 +1465,13 @@ label.text {
   gap: 1rem;
 }
 
+.container .column:last-child {
+  align-self: self-end;
+}
+.container .column:last-child .button:first-child {
+  margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 1400px) {
   .filters {
     width: 260px;
