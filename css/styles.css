@@ -40,7 +40,7 @@
   --text-white: #fff;
   --text-black: #000;
   --bg-white: #fff;
-  --bg-gray: #F3F5FB;
+  --bg-gray: #f2f2f3;
   --bg-hover: #f9fafd;
   --line: #808080;
   --blue: #3042dc;
@@ -314,22 +314,9 @@ img {
   max-width: 100%;
   flex-grow: 1;
   /* animation: transitionIn .75s forwards; */
-  border: 1px solid var(--primary-hover);
+  /* border: 1px solid var(--primary-hover); */
   border-radius: 1.6rem;
-  background: var(--bg-hover);
-}
-
-.container:hover {
   background: var(--bg-white);
-}
-
-/* styles for touch screen */
-@media (hover: none) {
-  .container {
-    box-shadow: none;
-    /* disable hover effect */
-    pointer-events: none;
-  }
 }
 
 .container .text {
@@ -633,11 +620,15 @@ img {
   padding-bottom: calc(2.6rem + 1.3rem);
   width: 400px;
   max-width: 100%;
+  border: 1px solid var(--bg-gray);
   color: var(--text-black);
-  border: 1px solid var(--primary-hover);
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition);
+}
+
+.container[data-type="competence"]:hover {
+  border: 1px solid var(--primary-hover);
 }
 
 .container-link {
@@ -660,10 +651,6 @@ img {
   width: 60px;
   height: 26px;
   transition: var(--transition);
-}
-
-.container[data-type="competence"]:hover .title {
-  text-decoration: underline;
 }
 
 .container[data-type="competence"]:hover img {
@@ -1468,6 +1455,7 @@ label.text {
 .container .column:last-child {
   align-self: self-end;
 }
+
 .container .column:last-child .button:first-child {
   margin-bottom: 2rem;
 }
