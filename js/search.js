@@ -5,6 +5,9 @@ const competitions = document.querySelectorAll(
   '.container[data-type="competition"]'
 );
 const titles = document.querySelectorAll(".competition-content h1.title");
+const closeButton = document.querySelector(
+  ".search-competition img[alt='Закрыть']"
+);
 
 if (input) {
   input.addEventListener("input", () => {
@@ -29,13 +32,13 @@ if (input) {
     });
   });
 
-  document
-    .querySelector(".search-competition img[alt='Закрыть']")
-    .addEventListener("click", () => {
+  if (closeButton) {
+    closeButton.addEventListener("click", () => {
       document
         .querySelectorAll('.tag, .container[data-type="competition"]')
         .forEach((element) => {
           element.style.display = "flex";
         });
     });
+  }
 }
