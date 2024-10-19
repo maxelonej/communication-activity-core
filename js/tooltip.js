@@ -44,10 +44,18 @@ if (mediaQueryList.matches) {
 
             const tooltipContent = projectIntroContainer.innerHTML;
             tooltipContainer.innerHTML = tooltipContent;
+
+            tooltipContainer.classList.add("visible");
           } else {
-            tooltipContainer.innerHTML = `<p class="text">${link.href.substring(link.href.lastIndexOf("/") + 1)} не найден...</p>`;
+            tooltipContainer.innerHTML = `<p class="text">${link.href.substring(
+              link.href.lastIndexOf("/") + 1
+            )} не найден...</p>`;
           }
         });
+    });
+
+    container.addEventListener("mouseout", () => {
+      tooltipContainer.classList.remove("visible");
     });
   });
 }

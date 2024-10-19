@@ -1691,9 +1691,9 @@ label.text {
       display: none;
     }
   }
+}
 
-  .container[data-type="project"]:hover .tooltip-container {
-    opacity: 1;
-    visibility: visible;
-  }
+.visible {
+  opacity: 1;
+  visibility: visible;
 }
