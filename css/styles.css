@@ -187,7 +187,7 @@ img {
 
 /* ul li a */
 .header__nav-link {
-  padding-block: calc(56px / 3);
+  padding-block: calc(55px / 3);
   padding-inline: 1.16rem;
   text-decoration: none;
   color: var(--text-white);
