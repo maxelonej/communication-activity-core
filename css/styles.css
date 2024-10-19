@@ -40,7 +40,7 @@
   --text-white: #fff;
   --text-black: #000;
   --bg-white: #fff;
-  --bg-gray: #f7f7f7f7;
+  --bg-gray: #eee;
   --bg-hover: #f9fafd;
   --line: #808080;
   --blue: #3042dc;
@@ -317,7 +317,7 @@ img {
   flex-grow: 1;
   /* animation: transitionIn .75s forwards; */
   /* border: 1px solid var(--primary-hover); */
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   border-radius: 1.6rem;
   background: var(--bg-white);
 }
@@ -1123,7 +1123,7 @@ ul[class] {
   height: fit-content;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   transition: var(--transition);
 }
 
