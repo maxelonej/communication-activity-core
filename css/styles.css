@@ -342,7 +342,7 @@ img {
   flex-grow: 0;
   flex-direction: column;
   justify-content: space-between;
-  width: 45rem;
+  width: 42rem;
 }
 
 .container[data-type="full"] {
