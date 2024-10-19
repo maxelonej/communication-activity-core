@@ -5,7 +5,7 @@ headers.forEach((header) => {
     <div class="header__wrapper">
       <!-- logo -->
       <a class="header__logo-link" href="/index.html">
-        <img class="header__logo" src="/img/logo.svg" alt="Лого">
+        <img class="header__logo" src="/img/logo.png" alt="Лого">
       </a>
       <!-- navigation -->
       <nav class="header__nav">
