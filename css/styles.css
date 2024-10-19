@@ -510,15 +510,11 @@ img {
   padding-block: 18px;
   padding-left: 46px;
   padding-right: 46px;
-  border: 1px solid var(--line);
+  border: none;
+  border-radius: 16px;
   font-family: var(--ff-regular);
   font-size: var(--fs-300);
   outline: none;
-}
-
-.search-competition input:hover,
-.search-competition input:focus {
-  border: 1px solid black;
 }
 
 .search-competition img {
