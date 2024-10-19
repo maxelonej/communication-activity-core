@@ -1,12 +1,11 @@
 .calendar {
-  background-color: var(--bg-hover);
-  border: 1px solid var(--primary-hover);
-  border-radius: 30px;
-  padding: 20px;
   position: relative;
+  padding: 20px;
   overflow: hidden;
-  font-size: var(--fs-550);
+  border-radius: 30px;
   font-family: cursive;
+  font-size: var(--fs-550);
+  background: var(--bg-white);
 }
 
 .calendar-header {
@@ -16,11 +15,15 @@
   font-size: var(--fs-600);
   font-weight: 600;
   color: var(--primary-hover);
-  padding: 10px;
+  padding: 1rem;
+}
+
+#year {
+  padding-right: 1rem;
 }
 
 .calendar-body {
-  padding: 10px;
+  padding: 1rem;
 }
 
 .calendar-week-day {
