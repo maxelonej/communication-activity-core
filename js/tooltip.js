@@ -45,7 +45,8 @@ if (mediaQueryList.matches) {
             const tooltipContent = projectIntroContainer.innerHTML;
             tooltipContainer.innerHTML = tooltipContent;
 
-            tooltipContainer.classList.add("visible");
+            tooltipContainer.style.opacity = 1;
+            tooltipContainer.style.visibility = "visible";
           } else {
             tooltipContainer.innerHTML = `<p class="text">${link.href.substring(
               link.href.lastIndexOf("/") + 1
@@ -55,7 +56,8 @@ if (mediaQueryList.matches) {
     });
 
     container.addEventListener("mouseout", () => {
-      tooltipContainer.classList.remove("visible");
+      tooltipContainer.style.opacity = 0;
+      tooltipContainer.style.visibility = "hidden";
     });
   });
 }
