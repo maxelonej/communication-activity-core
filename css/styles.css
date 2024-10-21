@@ -36,11 +36,13 @@
 :root {
   --primary: #55537e;
   --primary-hover: #444266;
+  --secondary: #bdbccb;
   --text-gray: #8a8989;
   --text-white: #fff;
   --text-black: #000;
   --bg-white: #fff;
   --bg-gray: #eee;
+  --bg-grayblue: #55537e59;
   --bg-hover: #f9fafd;
   --line: #808080;
   --blue: #3042dc;
@@ -142,8 +144,22 @@ img {
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background: var(--secondary);
 }
 
 /* Start of header */
@@ -341,6 +357,10 @@ img {
 .wrapper[data-type="card"] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.container[data-type="profile"] .container[data-type="card"] {
+  max-width: 400px;
 }
 
 .container[data-type="card"] {
@@ -700,11 +720,13 @@ img {
 }
 
 .container[data-type="profile"] {
-  flex-grow: 0;
-  align-items: start;
-  width: 76rem;
   display: flex;
   flex-flow: row wrap;
+  align-items: start;
+  justify-content: start;
+  flex-grow: 0;
+  /* width: 76rem; */
+  background: var(--bg-grayblue);
 }
 
 .container[data-type="profile"] label,
@@ -713,12 +735,13 @@ img {
 }
 
 .container[data-type="profile"] label {
-  color: var(--line);
+  color: var(--text-black);
   font-family: var(--ff-regular);
   font-size: var(--fs-400);
 }
 
 .container[data-type="profile"] input {
+  max-width: 17.2rem;
   width: 17.2rem;
   height: 3.2rem;
   font-family: var(--ff-regular);
@@ -726,7 +749,7 @@ img {
   border-radius: 5px;
   padding-inline: .6rem;
   outline: none;
-  border: 1px solid var(--primary-hover);
+  border: none;
   background: var(--bg-gray);
 }
 
@@ -1077,8 +1100,6 @@ ul[class] {
   .wrapper[data-type="card"] {
     grid-template-columns: auto;
   }
-
-  .container[data-type="card"] {}
 }
 
 @media screen and (max-width: 550px) {
@@ -1091,6 +1112,10 @@ ul[class] {
 @media (max-width: 392px) {
   .popup__message {
     width: 25rem;
+  }
+
+  .container[data-type="profile"] .container[data-type="card"] {
+    max-width: 320px;
   }
 }
 
@@ -1443,10 +1468,21 @@ label.text {
   width: 80%;
 }
 
+.column-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
 .column {
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 100%;
+  max-width: 17.2rem;
+  width: 17.2rem;
   gap: .6rem;
 }
 
@@ -1456,12 +1492,64 @@ label.text {
   gap: 1rem;
 }
 
-.container .column:last-child {
-  align-self: self-end;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2.6rem;
+  padding: 2.6em;
+  border-radius: 30px;
+  min-height: 100dvh;
+  background: var(--primary);
 }
 
-.container .column:last-child .button:first-child {
-  margin-bottom: 2rem;
+.wrapper[data-type="profile"] {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+}
+
+.wrapper[data-type="profile-blocks"] {
+  flex-flow: column nowrap;
+  justify-content: start;
+  margin: 0;
+}
+
+.sidebar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 6px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.sidebar-container:hover {
+  background: var(--secondary);
+
+  p.title--text {
+    color: var(--text-black);
+    font-weight: bold;
+  }
+
+  .icon-wrapper {
+    background: var(--bg-white);
+  }
+}
+
+.icon-wrapper {
+  margin-left: 6px;
+  padding-block: 6px;
+}
+
+.sidebar-container p.title--text {
+  color: var(--text-white);
+  font-family: var(--ff-regular);
+  font-weight: normal;
+  padding-right: 21px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1585,11 +1673,23 @@ label.text {
     position: absolute;
     bottom: 7%;
   }
+
+  .column-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 820px) {
   .projects {
     grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .column-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
