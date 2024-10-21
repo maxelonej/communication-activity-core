@@ -835,8 +835,10 @@ img {
 .popup__wrapper {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
   gap: 2.6rem;
   padding: 2.6rem;
+  margin: 5.2rem;
   border-radius: 8px;
   background: var(--bg-white);
   max-width: 93.75%;
@@ -1499,7 +1501,6 @@ label.text {
   gap: 2.6rem;
   padding: 2.6em;
   border-radius: 30px;
-  min-height: 100dvh;
   background: var(--primary);
 }
 
