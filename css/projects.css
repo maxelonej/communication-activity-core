@@ -51,7 +51,7 @@
   border: 1px solid var(--line);
   background: var(--bg-gray);
   font-size: 12px;
-  height: 25px;
+  min-height: 25px;
   cursor: default;
 }
 
