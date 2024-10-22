@@ -1476,6 +1476,9 @@ label.text {
 }
 
 .sidebar {
+  position: sticky;
+  height: fit-content;
+  top: calc(56px + 2.6rem);
   display: flex;
   flex-direction: column;
   justify-content: start;
