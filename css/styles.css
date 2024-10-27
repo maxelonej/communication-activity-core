@@ -1505,16 +1505,11 @@ label.text {
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
-  transition: background var(--transition);
+  transition: var(--transition);
 }
 
 .sidebar-container:hover {
-  background: var(--secondary);
-
-  p.title--text {
-    color: var(--text-black);
-    font-weight: bold;
-  }
+  background: var(--primary-hover);
 
   .icon-wrapper {
     background: var(--bg-white);
