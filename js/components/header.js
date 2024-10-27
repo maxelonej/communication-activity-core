@@ -20,7 +20,7 @@ headers.forEach((header) => {
             <a class="header__nav-link" href="/pages/competitions.html">Конкурсы</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link" href="/pages/taomskills.html">TaomSkills</a>
+            <a class="header__nav-link" href="/pages/taomskills.html">ТАУ SKILLS</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="/pages/internships.html">Практики и стажировки</a>
@@ -66,7 +66,7 @@ headers.forEach((header) => {
             <a class="header__burger__nav-link" href="/pages/competition.html">Конкурсы</a>
           </li>
           <li class="header__burger__nav-item">
-            <a class="header__burger__nav-link" href="/pages/taomskills.html">TaomSkills</a>
+            <a class="header__burger__nav-link" href="/pages/taomskills.html">ТАУ SKILLS</a>
           </li>
           <li class="header__burger__nav-item">
             <a class="header__burger__nav-link" href="/pages/internships.html">Практики и стажировки</a>
