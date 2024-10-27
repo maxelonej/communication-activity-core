@@ -36,10 +36,10 @@ headers.forEach((header) => {
       <!-- links -->
       <div class="header__links">
         <a class="header__links-link" href="/pages/calendar.html">
-          <img class="header__links-icon" src="/img/calendar.svg" alt="Календарь мероприятий">
+          <img class="header__links-icon" src="/img/calendar.png" alt="Календарь мероприятий">
         </a>
         <a class="header__links-link" href="/pages/profile.html">
-          <img class="header__links-icon" src="/img/profile.svg" alt="Профиль">
+          <img class="header__links-icon" src="/img/profile.png" alt="Профиль">
         </a>
         <!-- burger menu -->
         <div id="burger" class="header__links-link header__burger-open">
