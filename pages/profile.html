@@ -88,7 +88,14 @@
 
               <div class="column">
                 <label for="birthday">День рождения</label>
-                <input type="date" name="birthday" id="birthday" />
+                <!-- TODO: Скриптом менять и подгружать max value каждый год -->
+                <input
+                  type="date"
+                  name="birthday"
+                  id="birthday"
+                  min="1923-01-01"
+                  max="2006-12-31"
+                />
               </div>
 
               <div class="column">
@@ -96,6 +103,7 @@
               </div>
 
               <div class="column">
+                <!-- TODO: Проверять введенные данные на корректность, выводить уведомление об ошибке -->
                 <button class="button">Сохранить</button>
               </div>
             </div>
