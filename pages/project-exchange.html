@@ -1,268 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Коммуникационно–деятельностное ядро</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Коммуникационно–деятельностное ядро</title>
-  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="../css/styles.css">
-</head>
+  <body>
+    <header class="header"></header>
 
-<body>
-  <header class="header"></header>
+    <main>
+      <div class="container" data-type="intro">
+        <h1 class="title">Биржа проектов</h1>
+        <p class="text">
+          Это портал, позволяющий участвовать в проектах, решать практические
+          задачи
+        </p>
+      </div>
 
-  <main>
-    <div class="container" data-type="intro">
-      <h1 class="title">Биржа проектов</h1>
-      <p class="text">Это портал, позволяющий участвовать в проектах, решать практические задачи</p>
-    </div>
-
-    <div class="wrapper">
-      <button class="button">Проектный практикум 13.02</button>
-      <button class="button">Проектный практикум 27.02</button>
-      <button class="button">Проектный практикум 12.03</button>
-    </div>
-    <div class="container" data-type="full">
-      <h1 class="title">Архив проектов</h1>
-    </div>
-    <div class="wrapper">
-      <a href="./project-archive.html">
-        <button class="button">Карточка проектов</button>
-      </a>
-    </div>
-    <div class="container" data-type="full">
-      <h1 class="title">Проекты</h1>
-    </div>
-    <div class="wrapper" data-type="project">
-      <div class="projects">
-        <!-- project -->
-        <div class="container" data-type="project">
-          <h2 class="title--text">Коммуникационно-деятельностное ядро</h2>
-          <p class="text">Создание системы коммуникации между субъектами академии посредством использования сайта для
-            полноценной работы системы высшего образования</p>
-          <a href="./projects/taom/cac.html" class="button-link">
-            <button class="button">Подробнее</button>
-          </a>
-          <div class="tooltip-container"></div>
+      <div class="wrapper">
+        <button class="button">Проектный практикум 13.02</button>
+        <button class="button">Проектный практикум 27.02</button>
+        <button class="button">Проектный практикум 12.03</button>
+      </div>
+      <div class="container" data-type="full">
+        <h1 class="title">Архив проектов</h1>
+      </div>
+      <div class="wrapper">
+        <a href="./project-archive.html">
+          <button class="button">Карточка проектов</button>
+        </a>
+      </div>
+      <div class="container" data-type="full">
+        <h1 class="title">Проекты</h1>
+      </div>
+      <div class="wrapper" data-type="project">
+        <div class="projects">
+          <!-- project -->
+          <div class="container" data-type="project">
+            <h2 class="title--text">Коммуникационно-деятельностное ядро</h2>
+            <p class="text">
+              Создание системы коммуникации между субъектами академии
+              посредством использования сайта для полноценной работы системы
+              высшего образования
+            </p>
+            <a href="./projects/taom/cac.html" class="button-link">
+              <button class="button">Подробнее</button>
+            </a>
+            <div class="tooltip-container"></div>
+          </div>
         </div>
-      </div>
-      <div class="open-filters">
-        <button class="button">Фильтры</button>
-      </div>
-      <div class="filters">
-        <div class="all-filters">
-          <div class="all-filters__filters">
-            <!-- for mobile exit -->
-            <div class="exit-filters">
-              <img class="arrow" src="../img/arrow-left.svg" alt="Стрелка влево">
-              <p class="title">Фильтры</p>
-            </div>
+        <div class="open-filters">
+          <button class="button">Фильтры</button>
+        </div>
+        <div class="filters">
+          <div class="all-filters">
+            <div class="all-filters__filters">
+              <!-- for mobile exit -->
+              <div class="exit-filters">
+                <img
+                  class="arrow"
+                  src="../img/arrow-left.svg"
+                  alt="Стрелка влево"
+                />
+                <p class="title">Фильтры</p>
+              </div>
 
-            <!-- Filter 1 -->
-            <div class="filter filter-1">
-              <!-- Name -->
-              <p class="text">Заказчик</p>
-              <!-- Options -->
+              <!-- Filter 1 -->
+              <div class="filter filter-1">
+                <!-- Name -->
+                <p class="text">Заказчик</p>
+                <!-- Options -->
+                <div class="options">
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" id="customer-1" name="customer" />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="customer-1">ТАУ</label>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" id="customer-2" name="customer" />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="customer-2">ДИПО</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Filter 2 -->
+              <div class="filter" data-type="competencies">
+                <!-- Name -->
+                <p class="text">Компетенции</p>
+                <div class="more">
+                  <p class="text">Любые</p>
+                  <!-- right chevron -->
+                  <img src="../img/chevron-right.svg" alt="Стрелка вправо" />
+                </div>
+              </div>
+
+              <!-- Filter 3 -->
+              <div class="filter filter-3">
+                <!-- Name -->
+                <p class="text">Статус</p>
+                <!-- Options -->
+                <div class="options">
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="status-completed"
+                        name="status"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="status-completed"
+                        >Завершен</label
+                      >
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input type="checkbox" id="status-frozen" name="status" />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="status-frozen">Заморожен</label>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="status-continues"
+                        name="status"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="status-continues"
+                        >Продолжается</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Filter 4 -->
+              <div class="filter">
+                <!-- Name -->
+                <p class="text">Направление подготовки</p>
+                <!-- Options -->
+                <div class="options">
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="direction-management"
+                        name="direction"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="direction-management"
+                        >Менеджмент</label
+                      >
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="direction-design"
+                        name="direction"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="direction-design">Дизайн</label>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="direction-economy"
+                        name="direction"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="direction-economy"
+                        >Экономика</label
+                      >
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="direction-ad"
+                        name="direction"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="direction-ad"
+                        >Реклама и связи с общественностью</label
+                      >
+                    </div>
+                  </div>
+                  <div class="option">
+                    <div class="checkbox-wrapper">
+                      <input
+                        type="checkbox"
+                        id="direction-informatics"
+                        name="direction"
+                      />
+                      <div class="fake-checkbox">
+                        <img src="../img/check-mark.svg" alt="Галочка" />
+                      </div>
+                      <label class="text" for="direction-informatics"
+                        >Прикладная информатика</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-buttons">
+              <button class="filter-button">Показать</button>
+              <button class="filter-button reset-button">Сбросить</button>
+            </div>
+          </div>
+
+          <!-- Competencies -->
+          <div class="competencies-filters">
+            <div class="competencies-filters__filters">
+              <div class="filter-header">
+                <div class="filter-header__arrow">
+                  <img
+                    class="arrow"
+                    src="../img/arrow-left.svg"
+                    alt="Стрелка влево"
+                  />
+                  <h3 class="title--text">Компетенции</h3>
+                </div>
+                <a class="reset-link text">сбросить</a>
+              </div>
+              <!-- search -->
+              <div class="search-filter-wrapper">
+                <input
+                  class="search-filter"
+                  placeholder="Фильтр по компетенциям"
+                  type="text"
+                  name="search-competencies"
+                  id="search-competencies"
+                />
+                <img
+                  class="icon search-clear"
+                  src="../img/close-circle.svg"
+                  alt="Очистить"
+                />
+              </div>
+              <!-- list of competencies -->
               <div class="options">
                 <div class="option">
                   <div class="checkbox-wrapper">
-                    <input type="checkbox" id="customer-1" name="customer" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="customer-1">ТАУ</label>
+                    <input
+                      type="checkbox"
+                      id="competence-1"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-1">Лидерство</label>
                   </div>
                 </div>
                 <div class="option">
                   <div class="checkbox-wrapper">
-                    <input type="checkbox" id="customer-2" name="customer" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="customer-2">ДИПО</label>
+                    <input
+                      type="checkbox"
+                      id="competence-2"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-2">Коммуникация</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-3"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-3"
+                      >Работа в команде</label
+                    >
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-4"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-4"
+                      >Приоритезация и делегирование задач</label
+                    >
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-5"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-5"
+                      >Финансовые и актуарные расчеты</label
+                    >
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-6"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-6"
+                      >Составление финансовой модели</label
+                    >
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-7"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-7"
+                      >Составление медиаплана</label
+                    >
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="competence-8"
+                      name="competence"
+                    />
+                    <div class="fake-checkbox">
+                      <img src="../img/check-mark.svg" alt="Галочка" />
+                    </div>
+                    <label class="text" for="competence-8"
+                      >Маркетинговый анализ</label
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Filter 2 -->
-            <div class="filter" data-type="competencies">
-              <!-- Name -->
-              <p class="text">Компетенции</p>
-              <div class="more">
-                <p class="text">Любые</p>
-                <!-- right chevron -->
-                <img src="../img/chevron-right.svg" alt="Стрелка вправо">
-              </div>
+            <!-- btn choose -->
+            <div class="competencies-buttons">
+              <button class="filter-button">Выбрать</button>
             </div>
-
-            <!-- Filter 3 -->
-            <div class="filter filter-3">
-              <!-- Name -->
-              <p class="text">Статус</p>
-              <!-- Options -->
-              <div class="options">
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="status-completed" name="status" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="status-completed">Завершен</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="status-frozen" name="status" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="status-frozen">Заморожен</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="status-continues" name="status" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="status-continues">Продолжается</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Filter 4 -->
-            <div class="filter">
-              <!-- Name -->
-              <p class="text">Направление подготовки</p>
-              <!-- Options -->
-              <div class="options">
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="direction-management" name="direction" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="direction-management">Менеджмент</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="direction-design" name="direction" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="direction-design">Дизайн</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="direction-economy" name="direction" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="direction-economy">Экономика</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="direction-ad" name="direction" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="direction-ad">Реклама и связи с общественностью</label>
-                  </div>
-                </div>
-                <div class="option">
-                  <div class="checkbox-wrapper">
-                    <input type="checkbox" id="direction-informatics" name="direction" />
-                    <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                    <label class="text" for="direction-informatics">Прикладная информатика</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="filter-buttons">
-            <button class="filter-button">Показать</button>
-            <button class="filter-button reset-button">Сбросить</button>
-          </div>
-        </div>
-
-        <!-- Competencies -->
-        <div class="competencies-filters">
-          <div class="competencies-filters__filters">
-            <div class="filter-header">
-              <div class="filter-header__arrow">
-                <img class="arrow" src="../img/arrow-left.svg" alt="Стрелка влево">
-                <h3 class="title--text">Компетенции</h3>
-              </div>
-              <a class="reset-link text">сбросить</a>
-            </div>
-            <!-- search -->
-            <div class="search-filter-wrapper">
-              <input class="search-filter" placeholder="Фильтр по компетенциям" type="text" name="search-competencies"
-                id="search-competencies">
-              <img class="icon search-clear" src="../img/close-circle.svg" alt="Очистить">
-            </div>
-            <!-- list of competencies -->
-            <div class="options">
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-1" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-1">Лидерство</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-2" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-2">Коммуникация</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-3" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-3">Работа в команде</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-4" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-4">Приоритезация и делегирование задач</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-5" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-5">Финансовые и актуарные расчеты</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-6" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-6">Составление финансовой модели</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-7" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-7">Составление медиаплана</label>
-                </div>
-              </div>
-              <div class="option">
-                <div class="checkbox-wrapper">
-                  <input type="checkbox" id="competence-8" name="competence" />
-                  <div class="fake-checkbox"> <img src="../img/check-mark.svg" alt="Галочка"> </div>
-                  <label class="text" for="competence-8">Маркетинговый анализ</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- btn choose -->
-          <div class="competencies-buttons">
-            <button class="filter-button">Выбрать</button>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="footer"></footer>
+    <footer class="footer"></footer>
 
-  <div class="popup popup-feedback"></div>
+    <div class="popup popup-feedback"></div>
 
-  <script src="../js/scripts.js" type="module"></script>
-</body>
-
+    <script src="../js/scripts.js" type="module"></script>
+  </body>
 </html>
