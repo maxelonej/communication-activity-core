@@ -106,12 +106,12 @@ let curr_year = { value: currDate.getFullYear() };
 
 generateCalendar(curr_month.value, curr_year.value);
 
-document.querySelector("#prev-year").onclick = () => {
-  --curr_year.value;
-  generateCalendar(curr_month.value, curr_year.value);
-};
+// document.querySelector("#prev-year").onclick = () => {
+//   --curr_year.value;
+//   generateCalendar(curr_month.value, curr_year.value);
+// };
 
-document.querySelector("#next-year").onclick = () => {
-  ++curr_year.value;
-  generateCalendar(curr_month.value, curr_year.value);
-};
+// document.querySelector("#next-year").onclick = () => {
+//   ++curr_year.value;
+//   generateCalendar(curr_month.value, curr_year.value);
+// };
