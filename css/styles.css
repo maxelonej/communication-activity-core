@@ -205,8 +205,11 @@ img {
 
 /* ul li a */
 .header__nav-link {
-  padding-block: calc(55px / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-inline: 1.16rem;
+  height: 56px;
   text-decoration: none;
   color: var(--text-white);
   font-family: var(--ff-regular);
