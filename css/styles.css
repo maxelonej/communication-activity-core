@@ -814,7 +814,6 @@ img {
   padding: 2.6rem;
   border-radius: 16px;
   background: var(--bg-white);
-  box-shadow: var(--box-shadow);
 }
 
 .activate-popup {
@@ -854,7 +853,7 @@ img {
   border-radius: 8px;
   background: var(--bg-white);
   max-width: 93.75%;
-  border: 1px solid var(--primary);
+  border: none;
 }
 
 .popup__wrapper .wrapper {
