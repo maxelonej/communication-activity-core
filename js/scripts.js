@@ -9,5 +9,6 @@ import "./clear-input.js";
 import "./filter.js";
 import "./nav.js";
 import "./popups.js";
+import "./profile-events.js";
 import "./search.js";
 import "./tooltip.js";
