@@ -1507,6 +1507,24 @@ label.text {
   margin: 0;
 }
 
+.wrapper[data-type="tags"] {
+  justify-content: start;
+  margin: 0;
+  gap: 1.3rem;
+}
+
+.button[data-type="inactive"] {
+  padding: 8px 13px;
+  border-radius: 16px;
+  font-family: var(--ff-medium);
+  color: var(--text-black);
+  background: var(--bg-grayblue);
+}
+.button[data-type="inactive"]:hover {
+  color: var(--text-white);
+  background: var(--primary);
+}
+
 .sidebar-container {
   display: flex;
   align-items: center;
