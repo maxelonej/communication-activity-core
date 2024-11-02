@@ -1,21 +1,30 @@
-const buttons = document.querySelectorAll(".wrapper[data-type='tags'] .button");
+const btns = document.querySelectorAll(".wrapper[data-type='tags'] .button");
 const cards = document.querySelectorAll('#events .container[data-type="card"]');
 
-if (buttons.length && cards.length) {
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const tag = button.getAttribute("data-tag");
-      const isActive = button.getAttribute("data-type") === "active";
+// Если существуют на странице
+if (btns.length && cards.length) {
+  btns.forEach((btn) => {
+    // Кнопка при клике
+    btn.addEventListener("click", () => {
+      // Тег кнопки
+      const btnTag = btn.getAttribute("data-tag");
+      // Проверка статуса кнопки
+      const isActive = btn.getAttribute("data-type") === "active";
 
-      buttons.forEach((btn) => btn.setAttribute("data-type", "inactive"));
+      // Поставить всем кнопкам статус inactive
+      btns.forEach((btn) => btn.setAttribute("data-type", "inactive"));
 
+      // Кнопке, по которой кликнули, дать статус active, если она inactive
       if (!isActive) {
-        button.setAttribute("data-type", "active");
+        btn.setAttribute("data-type", "active");
       }
 
       cards.forEach((card) => {
-        const cardTags = card.getAttribute("data-tags").split(" ");
-        if (isActive || cardTags.includes(tag)) {
+        // Записать тег карточки
+        const cardTag = card.getAttribute("data-tag");
+        // Тег карточки совпадает с тегом кнопки
+        if (isActive || cardTag.includes(btnTag)) {
+          // Показать и анимировать
           animateCard(card, true);
         } else {
           card.style.display = "none";
@@ -25,23 +34,23 @@ if (buttons.length && cards.length) {
   });
 }
 
-function animateCard(card, show) {
+const animateCard = (card, show) => {
   if (show) {
+    // Показать
     card.style.display = "flex";
-    card.style.opacity = 0;
 
-    requestAnimationFrame(() => {
-      card.animate(
-        [
-          { opacity: 0, transform: "translateY(-20px)" },
-          { opacity: 1, transform: "translateY(0)" },
-        ],
-        {
-          duration: 800,
-          easing: "ease-in-out",
-        }
-      );
-      card.style.opacity = 1;
-    });
+    // Анимировать
+    card.animate(
+      // keyframes
+      [
+        { opacity: 0, transform: "translateY(-20px)" },
+        { opacity: 1, transform: "translateY(0)" },
+      ],
+      // options
+      {
+        duration: 800,
+        easing: "ease-in-out",
+      }
+    );
   }
-}
+};
