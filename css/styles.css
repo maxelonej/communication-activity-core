@@ -1839,6 +1839,10 @@ label.text {
     display: none;
   }
 
+  .wrapper[data-type="profile"] {
+    gap: 0;
+  }
+
   .container[data-type="profile"] {
     justify-content: center;
   }
