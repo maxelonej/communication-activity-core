@@ -1502,6 +1502,12 @@ label.text {
   justify-content: start;
 }
 
+#events {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
 .wrapper[data-type="profile-blocks"] {
   flex-flow: column nowrap;
   justify-content: start;
