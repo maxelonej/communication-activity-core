@@ -1,4 +1,4 @@
 RewriteEngine on
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
-RewriteRule ^index\.html$ http://ВАШ САЙТ/ [R=301,L]
+RewriteRule ^index\.html$ http://https://communication-activity-core.vercel.app/pages/ [R=301,L]
