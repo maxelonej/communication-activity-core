@@ -54,7 +54,7 @@
   padding: 5px;
   position: relative;
   cursor: pointer;
-  animation: to-top .8s forwards;
+  animation: to-top 0.8s forwards;
   border-radius: 50%;
 }
 
@@ -81,7 +81,7 @@
   padding: 5px 10px;
   border-radius: 10px;
   cursor: pointer;
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .month-picker:hover {
@@ -138,12 +138,12 @@
   transition: 0.4s ease-in-out;
 }
 
-.month-list>div {
+.month-list > div {
   display: grid;
   place-items: center;
 }
 
-.month-list>div>div {
+.month-list > div > div {
   width: 100%;
   padding: 5px 20px;
   border-radius: 10px;
@@ -152,7 +152,7 @@
   color: var(--text-black);
 }
 
-.month-list>div>div:hover {
+.month-list > div > div:hover {
   color: var(--text-white);
   background: var(--primary-hover);
 }

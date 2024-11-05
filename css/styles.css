@@ -1522,6 +1522,25 @@ label.text {
   pointer-events: none;
 }
 
+.floating-form {
+  position: relative;
+}
+.floating-input {
+  display: block;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
+  background: var(--bg-white);
+  border: 2px solid var(--bg-gray);
+  outline: none;
+}
+.floating-label {
+  position: absolute;
+  left: 2rem;
+  top: 0.5rem;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-400);
+}
+
 @media screen and (max-width: 1400px) {
   .filters {
     width: 260px;
