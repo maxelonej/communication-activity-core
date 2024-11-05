@@ -38,7 +38,7 @@ headers.forEach((header) => {
         <a class="header__links-link" href="/pages/calendar.html">
           <img class="header__links-icon" src="/img/calendar.png" alt="Календарь мероприятий">
         </a>
-        <a class="header__links-link" href="/pages/profile.html">
+        <a class="header__links-link" href="/pages/auth.html">
           <img class="header__links-icon" src="/img/profile.png" alt="Профиль">
         </a>
         <!-- burger menu -->
