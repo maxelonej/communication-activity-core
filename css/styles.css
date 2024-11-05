@@ -61,52 +61,6 @@
   --box-shadow: 0px 2px 2px #00000040;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  80% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes transitionIn {
-  from {
-    opacity: 0;
-    transform: rotateX(-10deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: 0;
-  }
-}
-
-@keyframes to-top {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -344,7 +298,6 @@ img {
   gap: 1.3rem;
   max-width: 100%;
   flex-grow: 1;
-  /* animation: transitionIn .75s forwards; */
   /* border: 1px solid var(--primary-hover); */
   /* box-shadow: var(--box-shadow); */
   border-radius: 1.6rem;
