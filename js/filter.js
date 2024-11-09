@@ -120,16 +120,16 @@ if (openFilters) {
       document.body.style.overflow = "hidden";
     }
   });
+
+  const mq = window.matchMedia("(max-width: 1075px)");
+
+  document.addEventListener("click", (e) => {
+    if (
+      mq.matches &&
+      !openFiltersButton.contains(e.target) &&
+      !filtersContainer.contains(e.target)
+    ) {
+      filtersContainer.classList.remove("active");
+    }
+  });
 }
-
-const mq = window.matchMedia("(max-width: 1075px)");
-
-document.addEventListener("click", (e) => {
-  if (
-    mq.matches &&
-    !openFiltersButton.contains(e.target) &&
-    !filtersContainer.contains(e.target)
-  ) {
-    filtersContainer.classList.remove("active");
-  }
-});
