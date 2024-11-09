@@ -137,10 +137,11 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: none;
-  outline: none;
+  margin-block: 1.6rem;
   width: 100%;
   height: 100%;
+  border: none;
+  outline: none;
 }
 .input {
   position: absolute;
@@ -153,10 +154,9 @@ img {
   background: transparent;
   font-family: var(--ff-medium);
   font-size: var(--fs-300);
-  z-index: 1111;
+  z-index: 1;
   transition: var(--transition);
 }
-/* todo под profile отдельный сделать bg и border */
 .input:hover {
   border: 2px solid var(--bg-grayblue);
 }
@@ -174,13 +174,13 @@ img {
   background: var(--bg-white);
   pointer-events: none;
   transform: translate(-16px, -10px);
-  z-index: 1112;
+  z-index: 2;
   transition: var(--transition);
 }
 
 .input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px var(--bg-white) inset;
-  box-shadow: 0 0 0 30px var(--bg-white) inset;
+  -webkit-box-shadow: 0 0 0 30px transparent inset;
+  box-shadow: 0 0 0 30px transparent inset;
   border: 2px solid #ffd700;
 }
 
@@ -189,7 +189,10 @@ img {
 /* Header */
 .header {
   position: sticky;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
   top: 0;
   margin-bottom: 2.6rem;
   width: 100%;
@@ -203,6 +206,8 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-inline: 2.6rem;
+  max-width: 192rem;
+  width: 100%;
 }
 
 /* 1. Header Logo */
@@ -296,7 +301,7 @@ img {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   padding: 2.6rem;
   max-width: calc(312px - (900px - 100vw) * (300 - 220) / (900 - 320));
   width: 100%;
@@ -770,16 +775,55 @@ img {
   display: flex;
   flex-flow: row wrap;
   align-items: start;
-  justify-content: start;
+  justify-content: center;
   flex-grow: 0;
+  gap: 2.6rem;
   /* width: 76rem; */
   background: var(--bg-grayblue);
+}
+
+.container[data-type="profile"] .form {
+  gap: 2.6rem;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 1269px) {
+  .container[data-type="profile"] {
+    justify-content: start;
+  }
+
+  .container[data-type="profile"] .form {
+    gap: 1.3rem;
+    align-items: flex-start;
+    min-height: 100%;
+  }
+}
+
+.container[data-type="profile"] .form .label {
+  background: var(--bg-grayblue);
+}
+
+.container[data-type="profile"] .form .input {
+  min-width: auto;
+  color: var(--text-white);
+}
+.container[data-type="profile"] .form .input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--bg-grayblue) inset;
+  box-shadow: 0 0 0 30px var(--bg-grayblue) inset;
+  border: 2px solid #ffd700;
+}
+.container[data-type="profile"] .form .input:hover {
+  border: 2px solid var(--primary);
 }
 
 /* End of containers  */
 
 /* Start of footer */
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: auto;
   width: 100%;
   height: 56px;
@@ -790,6 +834,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 192rem;
+  width: 100%;
   margin: 0 2.6rem;
   height: 56px;
   color: var(--text-white);
@@ -845,7 +891,7 @@ img {
   width: 100%;
   height: 100%;
   background: #00000080;
-  z-index: 1000;
+  z-index: 4;
   transition: var(--transition);
 }
 
@@ -1148,7 +1194,6 @@ ul[class] {
   .pixel {
     width: auto;
   }
-  
 }
 
 @media screen and (max-width: 386px) {
@@ -1547,6 +1592,7 @@ label.text {
   display: flex;
   flex-direction: column;
   margin: 0;
+  gap: 0;
 }
 
 .wrapper[data-type="profile-blocks"] {
@@ -1558,6 +1604,7 @@ label.text {
 .wrapper[data-type="tags"] {
   justify-content: start;
   margin: 0;
+  margin-bottom: 2.6rem;
   gap: 1.3rem;
 }
 
@@ -1749,10 +1796,14 @@ label.text {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 490px) {
   .column-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .container[data-type="profile"] {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1831,7 +1882,7 @@ label.text {
   background: var(--bg-white);
   padding: 10px;
   border: 1px solid var(--primary-hover);
-  z-index: 1000;
+  z-index: 2;
 }
 
 @media screen and (min-width: 1024px) {
