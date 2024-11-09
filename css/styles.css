@@ -131,7 +131,6 @@ img {
   justify-content: center;
   gap: 2.6rem;
   width: 20rem;
-  height: 14rem;
 }
 .fieldset {
   position: relative;
@@ -179,8 +178,8 @@ img {
 }
 
 .input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px transparent inset;
-  box-shadow: 0 0 0 30px transparent inset;
+  -webkit-box-shadow: 0 0 0 30px var(--bg-white) inset;
+  box-shadow: 0 0 0 30px var(--bg-white) inset;
   border: 2px solid #ffd700;
 }
 
@@ -404,6 +403,10 @@ img {
 
 .auth-body {
   background: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
+}
+
+.container[data-type="auth"] .button-link {
+  margin-top: 2.6rem;
 }
 
 .wrapper[data-type="card"] {
