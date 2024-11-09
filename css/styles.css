@@ -4,6 +4,13 @@
 /* Fonts */
 
 @font-face {
+  font-family: "Press Start 2P";
+  src: url("../font/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Inter Regular";
   src: url("../font/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -42,7 +49,7 @@
   --text-black: #000;
   --bg-white: #fff;
   --bg-gray: #eee;
-  --bg-grayblue: #55537e59;
+  --bg-grayblue: #b9b8c7;
   --bg-hover: #f9fafd;
   --line: #808080;
   --blue: #3042dc;
@@ -115,6 +122,66 @@ img {
   border: none;
   border-radius: 30px;
   background: var(--secondary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.6rem;
+  width: 20rem;
+  height: 14rem;
+}
+.fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+.input {
+  position: absolute;
+  outline: none;
+  width: 100%;
+  min-width: 19rem;
+  padding: 0.5rem 1.3rem;
+  border-radius: 20px;
+  border: 2px solid var(--bg-gray);
+  background: transparent;
+  font-family: var(--ff-medium);
+  font-size: var(--fs-300);
+  z-index: 1111;
+  transition: var(--transition);
+}
+/* todo под profile отдельный сделать bg и border */
+.input:hover {
+  border: 2px solid var(--bg-grayblue);
+}
+.input:focus {
+  border: 2px solid var(--primary);
+}
+/* labelline */
+.label {
+  position: absolute;
+  margin: 0rem 2.6rem;
+  font-family: var(--ff-medium);
+  font-size: var(--fs-300);
+  color: var(--primary);
+  /* background: var(--bg-grayblue); */
+  background: var(--bg-white);
+  pointer-events: none;
+  transform: translate(-16px, -10px);
+  z-index: 1112;
+  transition: var(--transition);
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--bg-white) inset;
+  box-shadow: 0 0 0 30px var(--bg-white) inset;
+  border: 2px solid #ffd700;
 }
 
 /* Start of header */
@@ -318,6 +385,20 @@ img {
 .container[data-type="column"] {
   flex-direction: column;
   justify-content: space-between;
+}
+
+.container[data-type="auth"] {
+  flex-grow: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.container[data-type="auth"] a.link {
+  align-self: end;
+}
+
+.auth-body {
+  background: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
 }
 
 .wrapper[data-type="card"] {
@@ -695,30 +776,6 @@ img {
   background: var(--bg-grayblue);
 }
 
-.container[data-type="profile"] label,
-.container[data-type="profile"] input {
-  display: block;
-}
-
-.container[data-type="profile"] label {
-  color: var(--text-black);
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
-}
-
-.container[data-type="profile"] input {
-  max-width: 17.2rem;
-  width: 17.2rem;
-  height: 3.2rem;
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
-  border-radius: 5px;
-  padding-inline: 0.6rem;
-  outline: none;
-  border: none;
-  background: var(--bg-gray);
-}
-
 /* End of containers  */
 
 /* Start of footer */
@@ -902,9 +959,25 @@ img {
   font-weight: bold;
 }
 
+.pixel {
+  font-family: "Press Start 2P";
+  color: var(--primary);
+  width: 361px;
+  line-height: 134%;
+  font-weight: 400;
+}
+
+.container[data-type="auth"] .title.pixel {
+  margin-bottom: 5.2rem;
+}
+.container[data-type="auth"] .button {
+  border-radius: 16px;
+  padding-inline: 1.8rem;
+}
+
 .title-text {
   font-family: var(--ff-medium);
-  font-size: var(--fs-300);
+  font-size: var(--fs-400);
   font-weight: bold;
 }
 
@@ -992,11 +1065,11 @@ ul[class] {
   }
 }
 
-@media screen and (max-width: 1084px) {
+@media screen and (max-width: 1130px) {
   /* decrease fs nav-links in header */
   .header__nav-link {
     padding: 2rem 1.26rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .header__logo {
@@ -1522,23 +1595,9 @@ label.text {
   pointer-events: none;
 }
 
-.floating-form {
-  position: relative;
-}
-.floating-input {
-  display: block;
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
-  background: var(--bg-white);
-  border: 2px solid var(--bg-gray);
-  outline: none;
-}
-.floating-label {
-  position: absolute;
-  left: 2rem;
-  top: 0.5rem;
-  font-family: var(--ff-regular);
-  font-size: var(--fs-400);
+.wrapper[data-type="middle"] {
+  align-items: center;
+  height: 72vh;
 }
 
 @media screen and (max-width: 1400px) {

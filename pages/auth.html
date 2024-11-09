@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,18 +8,46 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
-  <body>
+  <body class="auth-body">
     <header class="header"></header>
 
-    <main>
-      <div class="container" data-type="intro">
-        <h1 class="title">Коммуникационно-деятельностное ядро</h1>
-        <p class="text">
-          Платформа для коммуникации внутри и вне ВУЗа по деятельностям,
-          проводимых Тольяттинской Академией Управления и актуализации
-          информации в реальном времени
-        </p>
-      </div>
+    <main class="wrapper" data-type="middle">
+      <section class="container" data-type="auth">
+        <h1 class="title pixel">Коммуникационно Деятельностное Ядро</h1>
+        <form class="form" id="form">
+          <h2 class="title--text pixel">Авторизация</h2>
+
+          <fieldset class="fieldset">
+            <label for="email" class="label">Почта</label>
+            <input
+              type="email"
+              name="email"
+              class="input"
+              id="email"
+              autocomplete="email"
+            />
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <label for="password" class="label">Пароль</label>
+            <input
+              class="input"
+              autocomplete="current-password"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </fieldset>
+
+          <!-- <button form="form" class="button" type="submit">
+              Подтвердить
+            </button> -->
+        </form>
+        <a href="profile.html" class="button-link">
+          <button class="button">Подтвердить</button>
+        </a>
+        <a href="#" class="link">Забыли пароль?</a>
+      </section>
     </main>
 
     <footer class="footer"></footer>
