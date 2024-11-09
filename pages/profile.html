@@ -47,66 +47,75 @@
 
         <div class="wrapper" data-type="profile-blocks">
           <!-- profile -->
-          <div class="container" data-type="profile" id="profile">
+          <section class="container" data-type="profile" id="profile">
             <label class="attach-files">
               <input type="file" style="display: none" />
               <img src="/img/image.svg" alt="Фото" />
               <p class="title-text">Добавить фото</p>
             </label>
 
-            <div class="column-container">
-              <div class="column">
-                <label for="surname">Фамилия</label>
-                <input type="text" name="surname" id="surname" />
-              </div>
+            <form id="form" class="form column-container">
+              <fieldset class="fieldset column">
+                <label class="label" for="surname">Фамилия</label>
+                <input type="text" name="surname" id="surname" class="input" />
+              </fieldset>
 
-              <div class="column">
-                <label for="name">Имя</label>
+              <fieldset class="fieldset column">
+                <label class="label" for="name">Имя</label>
                 <input
                   type="text"
                   name="name"
                   id="name"
+                  class="input"
                   autocomplete="given-name"
                 />
-              </div>
+              </fieldset>
 
-              <div class="column">
-                <label for="patronymic">Отчество</label>
-                <input type="text" name="patronymic" id="patronymic" />
-              </div>
+              <fieldset class="fieldset column">
+                <label class="label" for="patronymic">Отчество</label>
+                <input
+                  type="text"
+                  name="patronymic"
+                  id="patronymic"
+                  class="input"
+                />
+              </fieldset>
 
-              <div class="column">
-                <label for="email">Почта</label>
+              <fieldset class="fieldset">
+                <label for="email" class="label">Почта</label>
                 <input
                   type="email"
                   name="email"
+                  class="input"
                   id="email"
                   autocomplete="email"
                 />
-              </div>
+              </fieldset>
 
-              <div class="column">
-                <label for="position">Должность</label>
+              <fieldset class="fieldset column">
+                <label class="label" for="position">Должность</label>
                 <input
                   type="text"
                   name="position"
                   id="position"
+                  class="input"
                   value="Студент"
                   disabled
                 />
-              </div>
+              </fieldset>
 
-              <div class="column">
-                <label for="birthday">День рождения</label>
-                <!-- TODO: Скриптом менять и подгружать max value каждый год -->
+              <fieldset class="fieldset column">
+                <label for="birthday" class="label">День рождения</label>
                 <input
                   type="date"
                   name="birthday"
                   id="birthday"
+                  class="input"
                   min="1923-01-01"
                   max="2006-12-31"
                 />
-              </div>
+              </fieldset>
+              <!-- TODO: Скриптом менять и подгружать max value каждый год -->
 
               <div class="column">
                 <button class="button">Резюме</button>
@@ -116,8 +125,8 @@
                 <!-- TODO: Проверять введенные данные на корректность, выводить уведомление об ошибке -->
                 <button class="button">Сохранить</button>
               </div>
-            </div>
-          </div>
+            </form>
+          </section>
 
           <!-- events -->
           <div class="wrapper" data-type="profile" id="events">
