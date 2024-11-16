@@ -205,8 +205,9 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-inline: 2.6rem;
-  max-width: 192rem;
   width: 100%;
+  max-width: 192rem;
+  height: 56px;
 }
 
 /* 1. Header Logo */
@@ -1019,6 +1020,7 @@ img {
 .container[data-type="auth"] .title.pixel {
   margin-bottom: 5.2rem;
 }
+
 .container[data-type="auth"] .button {
   border-radius: 16px;
   padding-inline: 1.8rem;
