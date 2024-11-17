@@ -95,7 +95,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background: var(--bg-gray);
+  background: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
 }
 
 img {
@@ -1235,7 +1235,7 @@ ul[class] {
   width: 400px;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 1;
+  z-index: 5;
   top: calc(56px + 2.6rem);
   gap: 0;
   height: fit-content;
@@ -1817,7 +1817,7 @@ label.text {
     top: 0;
     left: 0;
     right: none;
-    z-index: 1;
+    z-index: 5;
     max-width: 100dvw;
     width: 100%;
     max-height: 100dvh;
