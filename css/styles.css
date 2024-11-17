@@ -484,7 +484,6 @@ img {
 }
 
 .container[data-type="videos"] {
-  width: min(100rem, 100%);
   align-items: center;
   justify-content: center;
 }
@@ -1955,5 +1954,11 @@ label.text {
 
   .container[data-type="profile"] {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popup__wrapper {
+    margin: 7.8rem 1.3rem;
   }
 }
