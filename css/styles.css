@@ -923,6 +923,7 @@ img {
   border-radius: 8px;
   background: var(--bg-white);
   max-width: 93.75%;
+  scrollbar-width: none;
   border: none;
 }
 
