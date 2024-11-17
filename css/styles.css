@@ -91,6 +91,11 @@ button {
   scroll-margin-top: 82px;
 }
 
+*::selection {
+  background: var(--primary);
+  color: var(--text-white);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -409,6 +414,7 @@ img {
 .container[data-type="auth"] .link {
   margin-top: 1.6rem;
 }
+
 .container[data-type="auth"] .button-link {
   padding-top: 0;
 }
