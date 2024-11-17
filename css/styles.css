@@ -406,8 +406,11 @@ img {
   background: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
 }
 
+.container[data-type="auth"] .link {
+  margin-top: 1.6rem;
+}
 .container[data-type="auth"] .button-link {
-  margin-top: 2.6rem;
+  padding-top: 0;
 }
 
 .wrapper[data-type="card"] {
@@ -1049,6 +1052,12 @@ img {
 
 .link {
   color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+.link:hover {
+  border-bottom: 1px solid var(--blue);
 }
 
 /* ul, li */
