@@ -51,10 +51,11 @@
   --bg-gray: #eee;
   --bg-grayblue: #b9b8c7;
   --bg-hover: #f9fafd;
+  --bg-profile: #7c7a9d;
+  --bg-gradient: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
   --line: #808080;
   --blue: #3042dc;
   --border-mint: #dbe5e6;
-  --profile-bg: #7c7a9d;
   --transition: 0.4s;
   --ff-regular: "Inter Regular";
   --ff-medium: "Inter Medium";
@@ -101,7 +102,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background: linear-gradient(to bottom right, #d3ced7, #b8b8c7);
+  background: var(--bg-gradient);
 }
 
 img {
@@ -776,7 +777,7 @@ img {
   flex-grow: 0;
   gap: 2.6rem;
   /* width: 76rem; */
-  background: var(--profile-bg);
+  background: var(--bg-profile);
 }
 
 .container[data-type="profile"] .form {
@@ -799,7 +800,7 @@ img {
 
 .container[data-type="profile"] .form .label {
   color: white;
-  background: var(--profile-bg);
+  background: var(--bg-profile);
 }
 
 .container[data-type="profile"] .form .input {
@@ -807,8 +808,8 @@ img {
   color: var(--text-white);
 }
 .container[data-type="profile"] .form .input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px var(--bg-grayblue) inset;
-  box-shadow: 0 0 0 30px var(--bg-grayblue) inset;
+  -webkit-box-shadow: 0 0 0 30px var(--bg-profile) inset;
+  box-shadow: 0 0 0 30px var(--bg-profile) inset;
   border: 2px solid #ffd700;
 }
 .container[data-type="profile"] .form .input:hover {
@@ -1615,7 +1616,7 @@ label.text {
 
 .button[data-type="inactive"] {
   color: var(--text-white);
-  background: var(--profile-bg);
+  background: var(--bg-profile);
 }
 
 .button[data-type="inactive"]:hover {
