@@ -1,0 +1,8 @@
+@use "../utilities" as *;
+
+// Общие стили для тегов
+
+body {
+  @include fluid-text(18, 14);
+  font-family: $ff;
+}

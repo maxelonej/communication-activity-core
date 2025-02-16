@@ -1,0 +1,17 @@
+@use "../utilities" as *;
+
+// main page: sections
+.hero {
+  .title {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(88);
+    margin-bottom: rem(34);
+    line-height: 116%;
+  }
+
+  .description {
+    max-width: rem(623);
+    margin-bottom: rem(81);
+  }
+}

@@ -1,0 +1,30 @@
+@use "../utilities/" as *;
+
+.header {
+  padding-block: 10px;
+  box-shadow: $box-shadow;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: rem(29);
+  }
+
+  .logo {
+    width: rem(57);
+    height: rem(59);
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__menu {
+    @include flex-center;
+    gap: rem(26);
+
+    .menu__link {
+      color: $blue;
+      text-decoration: none;
+      @include fluid-text(22, 14);
+    }
+  }
+}

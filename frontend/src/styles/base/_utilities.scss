@@ -1,0 +1,25 @@
+@use "../utilities" as *;
+
+// вспомогательные классы например .text-center
+
+.container {
+  padding-inline: $container-padding-x;
+  margin-inline: auto;
+  max-width: calc($container-width + $container-padding-x);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile-l {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-l-above {
+    display: none !important;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../utilities" as *;
+
+// Element button
+
+.button {
+  padding: rem(14) rem(26);
+  min-width: rem(137);
+  @include fluid-text(24, 16);
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  border-radius: rem(12);
+  color: $white;
+  background: $blue;
+  transition: $transition;
+
+  @include laptop {
+    min-width: rem(103);
+    padding: rem(14) rem(20);
+    font-size: rem(14);
+    border-radius: rem(8);
+  }
+
+  @include hover {
+  }
+
+  // TODO: move to index page
+  & ~ & {
+    margin-left: rem(52);
+  }
+}

@@ -1,0 +1,108 @@
+@use "functions" as *;
+
+$laptop-l: 1439.98;
+$laptop: 1023.98;
+$tablet: 767.98;
+$mobile-l: 424.98;
+$mobile-m: 374.98;
+$mobile-s: 319.98;
+
+@mixin pc-above {
+  // $laptop-l: 1439.98;
+  @media (width > rem($laptop-l)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  // $laptop-l: 1439.98;
+  @media (width <= rem($laptop-l)) {
+    @content;
+  }
+}
+
+@mixin laptop-above {
+  // $laptop: 1023.98;
+  @media (width > rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  // $laptop: 1023.98;
+  @media (width <= rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  // $tablet: 767.98;
+  @media (width > rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  // $tablet: 767.98;
+  @media (width <= rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-l-above {
+  // $mobile-l: 424.98;
+  @media (width > rem($mobile-l)) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  // $mobile-l: 424.98;
+  @media (width <= rem($mobile-l)) {
+    @content;
+  }
+}
+
+@mixin mobile-m-above {
+  // $mobile-m: 374.98;
+  @media (width > rem($mobile-m)) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  // $mobile-m: 374.98;
+  @media (width <= rem($mobile-m)) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above {
+  // $mobile-s: 319.98;
+  @media (width > rem($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  // $mobile-s: 319.98;
+  @media (width <= rem($mobile-s)) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}
