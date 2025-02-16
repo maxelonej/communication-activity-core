@@ -25,6 +25,7 @@
       color: $blue;
       text-decoration: none;
       @include fluid-text(22, 14);
+      font-weight: 400;
     }
   }
 }
