@@ -1,6 +1,12 @@
-function Button({ text, rounded }) {
+function Button({ onClick, text, rounded, Component = "button", href }) {
   return (
-    <button className={`button ${rounded ? "rounded" : ""}`}>{text}</button>
+    <Component
+      onClick={onClick}
+      className={`button ${rounded ? "rounded" : ""}`}
+      href={href}
+    >
+      {text}
+    </Component>
   );
 }
 
