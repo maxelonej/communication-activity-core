@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import PAS from "../pages/PAS";
 import Internships from "../pages/Internships";
+import NotFound from "../pages/NotFound";
 
 import "../../styles/index.scss";
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/pas" element={<PAS />} />
         <Route path="/internships" element={<Internships />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   );
