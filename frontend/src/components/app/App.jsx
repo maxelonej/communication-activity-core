@@ -1,13 +1,11 @@
-import Header from "../widgets/Header";
-import Hero from "../widgets/Hero";
+import Home from "../pages/Home";
 
 import "../../styles/index.scss";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
+      <Home />
     </>
   );
 }
