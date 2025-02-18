@@ -1,0 +1,19 @@
+@use "../utilities/" as *;
+
+.footer {
+  margin-top: auto;
+  padding-block: rem(20);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .copyright {
+      color: $accent;
+      font-weight: bold;
+      user-select: none;
+      @include fluid-text(24, 16);
+    }
+  }
+}
