@@ -1,7 +1,9 @@
 @use "../utilities/" as *;
 
 .header {
+  position: sticky;
   padding-block: 10px;
+  width: 100%;
   box-shadow: $box-shadow;
 
   .container {
@@ -22,7 +24,7 @@
     gap: rem(26);
 
     .menu__link {
-      color: $blue;
+      color: $primary;
       text-decoration: none;
       @include fluid-text(22, 14);
       font-weight: 500;

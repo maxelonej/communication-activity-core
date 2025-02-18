@@ -11,13 +11,13 @@
 }
 
 .title {
-  color: $blue;
+  color: $primary;
   @include fluid-text(86, 32);
   font-weight: 400;
 }
 
 .description {
-  color: $blue;
+  color: $primary;
   @include fluid-text(22, 16);
   font-weight: bold;
 }
