@@ -1,4 +1,5 @@
 import Header from "../widgets/Header";
+import Footer from "../widgets/Footer";
 
 function PAS() {
   return (
@@ -7,6 +8,7 @@ function PAS() {
       <div className="container">
         <h1>*ПАС*</h1>
       </div>
+      <Footer />
     </>
   );
 }

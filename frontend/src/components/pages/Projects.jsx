@@ -1,4 +1,5 @@
 import Header from "../widgets/Header";
+import Footer from "../widgets/Footer";
 
 function Projects() {
   return (
@@ -7,6 +8,7 @@ function Projects() {
       <div className="container">
         <h1>*Биржа проектов*</h1>
       </div>
+      <Footer />
     </>
   );
 }
