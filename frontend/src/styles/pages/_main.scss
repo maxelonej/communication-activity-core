@@ -21,6 +21,7 @@
     top: calc(36px + 80px);
     right: 0;
     user-select: none;
+    pointer-events: none;
     @include fluid-width(389, math.div(389, 3));
     @include fluid-height(667, math.div(667, 3));
 
