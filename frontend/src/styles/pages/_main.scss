@@ -1,4 +1,5 @@
 @use "../utilities" as *;
+@use "sass:math";
 
 // main page: sections
 .hero {
@@ -20,8 +21,8 @@
     top: calc(36px + 80px);
     right: 0;
     user-select: none;
-    @include fluid-width(389, 389/3);
-    @include fluid-height(667, 667/3);
+    @include fluid-width(389, math.div(389, 3));
+    @include fluid-height(667, math.div(667, 3));
 
     @include tablet {
       @include hide;
