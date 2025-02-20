@@ -1,4 +1,5 @@
 import Button from "../shared/Button";
+import heroLogo from "../../assets/hero logo.svg";
 
 function Hero() {
   return (
@@ -17,6 +18,8 @@ function Hero() {
       </p>
 
       <Button text="Новости" />
+
+      <img className="hero-logo" src={heroLogo} alt="Лого Академии" />
     </div>
   );
 }
