@@ -19,6 +19,7 @@
     position: absolute;
     top: calc(36px + 80px);
     right: 0;
+    user-select: none;
     @include fluid-width(389, 389/3);
     @include fluid-height(667, 667/3);
 
