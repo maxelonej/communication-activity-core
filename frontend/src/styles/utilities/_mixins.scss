@@ -5,6 +5,14 @@
   font-size: fluid($max, $min);
 }
 
+@mixin fluid-width($max: 200, $min: 100) {
+  width: fluid($max, $min);
+}
+
+@mixin fluid-height($max: 200, $min: 100) {
+  height: fluid($max, $min);
+}
+
 @mixin hide {
   opacity: 0;
   visibility: hidden;
