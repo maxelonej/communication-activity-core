@@ -23,7 +23,7 @@
     @include fluid-height(667, 667/3);
 
     @include tablet {
-      display: none;
+      @include hide;
     }
   }
 }
