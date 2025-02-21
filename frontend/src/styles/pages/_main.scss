@@ -3,6 +3,8 @@
 
 // main page: sections
 .hero {
+  min-height: 100dvh;
+
   .title {
     display: flex;
     flex-direction: column;
